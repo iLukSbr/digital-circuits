@@ -1,0 +1,8 @@
+|flip_flop_d_positivo
+d => s1.DATAIN
+clk => s1.CLK
+clk => q~reg0.CLK
+q << q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qn << s1.DB_MAX_OUTPUT_PORT_TYPE
+
+

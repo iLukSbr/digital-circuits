@@ -1,0 +1,101 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/revox/Desktop/pratica4/ex2/simulation/qsim
+Elatch_d_nand
+Z1 w1714175734
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx5 maxii 15 maxii_atom_pack 0 22 M[3^e4UUhBPE2QBOTA<Y?1
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx5 maxii 16 maxii_components 0 22 `0P`LeL4Ve;z2d]fLfDzU3
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z8 8latch_d_nand.vho
+Z9 Flatch_d_nand.vho
+l0
+L35 1
+V7mf5ABznPlmnW=`7QM0123
+!s100 :DjzM><_>5iW2lHDc2Raf3
+Z10 OV;C;2020.1;71
+32
+Z11 !s110 1714175736
+!i10b 1
+Z12 !s108 1714175736.000000
+Z13 !s90 -work|work|latch_d_nand.vho|
+Z14 !s107 latch_d_nand.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 12 latch_d_nand 0 22 7mf5ABznPlmnW=`7QM0123
+!i122 0
+l66
+L47 117
+VR7FO;I=86:NDO;7L7i^8E2
+!s100 gQ0HW]^W<H>UEa^<QE>mi3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Elatch_d_nand_vhd_vec_tst
+Z17 w1714175732
+R6
+R7
+!i122 1
+R0
+Z18 8output_files/Waveform.vwf.vht
+Z19 Foutput_files/Waveform.vwf.vht
+l0
+L32 1
+V7leBYRgIkVZ`hIRHZEfIf3
+!s100 c5?<R5hDbDLHKh<fYKD[W0
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -work|work|output_files/Waveform.vwf.vht|
+!s107 output_files/Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Alatch_d_nand_arch
+R6
+R7
+DEx4 work 24 latch_d_nand_vhd_vec_tst 0 22 7leBYRgIkVZ`hIRHZEfIf3
+!i122 1
+l49
+L34 51
+VP`20>O`GdG2n:laQL[c0O2
+!s100 h17GHEPfb=H<@mYj:^>551
+R10
+32
+R11
+!i10b 1
+R12
+R20
+Z21 !s107 output_files/Waveform.vwf.vht|
+!i113 1
+R15
+R16

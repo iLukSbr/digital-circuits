@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="3.8.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#TTL" name="6"/>
+  <lib desc="#TCL" name="7"/>
+  <lib desc="#Base" name="8"/>
+  <lib desc="#BFH-Praktika" name="9"/>
+  <lib desc="#Input/Output-Extra" name="10"/>
+  <lib desc="#Soc" name="11"/>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="8" map="Button2" name="Poke Tool"/>
+    <tool lib="8" map="Button3" name="Menu Tool"/>
+    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="8" name="Poke Tool"/>
+    <tool lib="8" name="Edit Tool"/>
+    <tool lib="8" name="Wiring Tool"/>
+    <tool lib="8" name="Text Tool"/>
+    <sep/>
+    <tool lib="0" name="Pin"/>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <sep/>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+    <tool lib="1" name="XOR Gate"/>
+    <tool lib="1" name="NAND Gate"/>
+    <tool lib="1" name="NOR Gate"/>
+    <sep/>
+    <tool lib="4" name="D Flip-Flop"/>
+    <tool lib="4" name="Register"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="main"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(190,130)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="nor_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(190,270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="nand_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(280,380)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="vhdl_nor_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(280,400)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="vhdl_nand_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(280,420)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="vhdl_nn_and_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(280,440)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="vhdl_nn_or_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(40,130)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="x"/>
+    </comp>
+    <comp lib="0" loc="(40,270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="y"/>
+    </comp>
+    <comp lib="0" loc="(510,100)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="nn_and_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(510,210)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="nn_or_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(140,130)" name="NOR Gate"/>
+    <comp lib="1" loc="(140,270)" name="NAND Gate"/>
+    <comp lib="1" loc="(340,180)" name="NOT Gate"/>
+    <comp lib="1" loc="(340,60)" name="NOT Gate"/>
+    <comp lib="1" loc="(450,100)" name="AND Gate"/>
+    <comp lib="1" loc="(450,210)" name="OR Gate"/>
+    <comp loc="(280,380)" name="p2ex1">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(140,130)" to="(190,130)"/>
+    <wire from="(140,270)" to="(190,270)"/>
+    <wire from="(300,180)" to="(300,310)"/>
+    <wire from="(300,180)" to="(310,180)"/>
+    <wire from="(340,180)" to="(350,180)"/>
+    <wire from="(340,60)" to="(350,60)"/>
+    <wire from="(350,120)" to="(350,180)"/>
+    <wire from="(350,120)" to="(400,120)"/>
+    <wire from="(350,180)" to="(350,230)"/>
+    <wire from="(350,230)" to="(400,230)"/>
+    <wire from="(350,60)" to="(350,80)"/>
+    <wire from="(350,80)" to="(380,80)"/>
+    <wire from="(380,190)" to="(400,190)"/>
+    <wire from="(380,80)" to="(380,190)"/>
+    <wire from="(380,80)" to="(400,80)"/>
+    <wire from="(40,130)" to="(50,130)"/>
+    <wire from="(40,270)" to="(60,270)"/>
+    <wire from="(450,100)" to="(510,100)"/>
+    <wire from="(450,210)" to="(510,210)"/>
+    <wire from="(50,130)" to="(50,250)"/>
+    <wire from="(50,130)" to="(60,130)"/>
+    <wire from="(50,250)" to="(50,400)"/>
+    <wire from="(50,250)" to="(80,250)"/>
+    <wire from="(50,400)" to="(60,400)"/>
+    <wire from="(50,60)" to="(310,60)"/>
+    <wire from="(50,60)" to="(50,130)"/>
+    <wire from="(60,110)" to="(60,130)"/>
+    <wire from="(60,110)" to="(80,110)"/>
+    <wire from="(60,150)" to="(60,270)"/>
+    <wire from="(60,150)" to="(80,150)"/>
+    <wire from="(60,270)" to="(60,290)"/>
+    <wire from="(60,290)" to="(60,310)"/>
+    <wire from="(60,290)" to="(80,290)"/>
+    <wire from="(60,310)" to="(300,310)"/>
+    <wire from="(60,310)" to="(60,380)"/>
+  </circuit>
+  <vhdl name="p2ex1">--------------------------------------------------------------------------------&#13;
+-- Project :&#13;
+-- File    :&#13;
+-- Autor   :&#13;
+-- Date    :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+-- Description :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+LIBRARY ieee;&#13;
+USE ieee.std_logic_1164.all;&#13;
+&#13;
+ENTITY p2ex1 IS&#13;
+  PORT (&#13;
+  ------------------------------------------------------------------------------&#13;
+  --Insert input ports below&#13;
+    x          : IN  std_logic; -- input bit example&#13;
+    y          : IN  std_logic; -- input bit example&#13;
+  ------------------------------------------------------------------------------&#13;
+  --Insert output ports below&#13;
+    nor_out    : OUT std_logic; -- output bit example
+    nand_out   : OUT std_logic;  -- output bit example&#13;
+    nn_and_out : OUT std_logic;  -- output bit example
+    nn_or_out  : OUT std_logic  -- output bit example
+    );&#13;
+END p2ex1;&#13;
+&#13;
+--------------------------------------------------------------------------------&#13;
+--Complete your VHDL description below&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+ARCHITECTURE TypeArchitecture OF p2ex1 IS&#13;
+&#13;
+BEGIN&#13;
+&#13;	nor_out &lt;= x nor y;
+     nand_out &lt;= x nand y;&#13;
+     nn_and_out &lt;= (not x) and (not y);
+     nn_or_out &lt;= (not x) or (not y);
+END TypeArchitecture;&#13;
+</vhdl>
+</project>

@@ -1,0 +1,49 @@
+|sequencia
+clk_50M => basic_divider:clk_div.clk_in
+start => start_signal.OUTPUTSELECT
+msd[0] <= <GND>
+msd[1] <= <GND>
+msd[2] <= contagem_msd.DB_MAX_OUTPUT_PORT_TYPE
+msd[3] <= contagem_msd.DB_MAX_OUTPUT_PORT_TYPE
+msd[4] <= contagem_msd.DB_MAX_OUTPUT_PORT_TYPE
+msd[5] <= contagem_msd.DB_MAX_OUTPUT_PORT_TYPE
+msd[6] <= <GND>
+lsd[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+lsd[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+lsd[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+lsd[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+lsd[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+lsd[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+lsd[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sequencia|basic_divider:clk_div
+clk_in => temp.CLK
+clk_in => \P_div:count[0].CLK
+clk_in => \P_div:count[1].CLK
+clk_in => \P_div:count[2].CLK
+clk_in => \P_div:count[3].CLK
+clk_in => \P_div:count[4].CLK
+clk_in => \P_div:count[5].CLK
+clk_in => \P_div:count[6].CLK
+clk_in => \P_div:count[7].CLK
+clk_in => \P_div:count[8].CLK
+clk_in => \P_div:count[9].CLK
+clk_in => \P_div:count[10].CLK
+clk_in => \P_div:count[11].CLK
+clk_in => \P_div:count[12].CLK
+clk_in => \P_div:count[13].CLK
+clk_in => \P_div:count[14].CLK
+clk_in => \P_div:count[15].CLK
+clk_in => \P_div:count[16].CLK
+clk_in => \P_div:count[17].CLK
+clk_in => \P_div:count[18].CLK
+clk_in => \P_div:count[19].CLK
+clk_in => \P_div:count[20].CLK
+clk_in => \P_div:count[21].CLK
+clk_in => \P_div:count[22].CLK
+clk_in => \P_div:count[23].CLK
+clk_in => \P_div:count[24].CLK
+clk_out <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

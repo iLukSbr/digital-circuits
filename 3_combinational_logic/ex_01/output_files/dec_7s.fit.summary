@@ -1,0 +1,11 @@
+Fitter Status : Successful - Sun Apr  7 14:50:45 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : dec_7s
+Top-level Entity Name : dec_7s
+Family : MAX II
+Device : EPM240T100C3
+Timing Models : Final
+Total logic elements : 7 / 240 ( 3 % )
+Total pins : 20 / 80 ( 25 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

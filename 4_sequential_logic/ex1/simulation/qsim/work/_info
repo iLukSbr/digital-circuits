@@ -1,0 +1,191 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/revox/Desktop/pratica4/simulation/qsim
+Elatch_sr_nand
+Z1 w1713569236
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx5 maxii 15 maxii_atom_pack 0 22 M[3^e4UUhBPE2QBOTA<Y?1
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx5 maxii 16 maxii_components 0 22 `0P`LeL4Ve;z2d]fLfDzU3
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z8 8latch_sr_nand.vho
+Z9 Flatch_sr_nand.vho
+l0
+Z10 L35 1
+V9CWSg:[@h1c>8JkMdVXMA3
+!s100 W97@`E@8YmC6F8Gl:omST0
+Z11 OV;C;2020.1;71
+32
+Z12 !s110 1713569241
+!i10b 1
+Z13 !s108 1713569240.000000
+Z14 !s90 -work|work|latch_sr_nand.vho|
+Z15 !s107 latch_sr_nand.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 13 latch_sr_nand 0 22 9CWSg:[@h1c>8JkMdVXMA3
+!i122 0
+l68
+Z18 L47 140
+V^5lO_;]nTXM1JiO]>=E5V0
+!s100 <Q?T9ckQ9fPIMlRklQLQb3
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Elatch_sr_nand_vhd_vec_tst
+Z19 w1713569225
+R6
+R7
+!i122 1
+R0
+Z20 8Waveform.vwf.vht
+Z21 FWaveform.vwf.vht
+l0
+Z22 L32 1
+V:W5d_z`;9`A;kX?hhiNVR1
+!s100 eoO4`AS_lYeZil<CHi<[>1
+R11
+32
+Z23 !s110 1713569242
+!i10b 1
+Z24 !s108 1713569241.000000
+Z25 !s90 -work|work|Waveform.vwf.vht|
+Z26 !s107 Waveform.vwf.vht|
+!i113 1
+R16
+R17
+Alatch_sr_nand_arch
+R6
+R7
+DEx4 work 25 latch_sr_nand_vhd_vec_tst 0 22 :W5d_z`;9`A;kX?hhiNVR1
+!i122 1
+l49
+Z27 L34 49
+V6F[CGm@6j^GfPZeNSB4HB1
+!s100 DhPhjSbJch[zGcIZ[PT2Z3
+R11
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R16
+R17
+Elatch_sr_nor
+Z28 w1713570344
+R2
+R3
+R4
+R5
+R6
+R7
+!i122 2
+R0
+Z29 8latch_sr_nor.vho
+Z30 Flatch_sr_nor.vho
+l0
+R10
+V35;^lO7gYAz1_<nFgkY0?1
+!s100 ^m_cU>Y]`Nn3f5L0PW@4L3
+R11
+32
+Z31 !s110 1713570347
+!i10b 1
+Z32 !s108 1713570347.000000
+Z33 !s90 -work|work|latch_sr_nor.vho|
+Z34 !s107 latch_sr_nor.vho|
+!i113 1
+R16
+R17
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 12 latch_sr_nor 0 22 35;^lO7gYAz1_<nFgkY0?1
+!i122 2
+l68
+R18
+Vnbj0ezglhZP5V6;9^ACoe1
+!s100 P:U@Bd:<N[6`E1K=H`FoV1
+R11
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R16
+R17
+Elatch_sr_nor_vhd_vec_tst
+Z35 w1713570322
+R6
+R7
+!i122 3
+R0
+Z36 8Waveform1.vwf.vht
+Z37 FWaveform1.vwf.vht
+l0
+R22
+VDHmRg1bHn`0k8:ZhEcoH;2
+!s100 WVl374UU_=nK4SoOhd4O_0
+R11
+32
+R31
+!i10b 1
+R32
+Z38 !s90 -work|work|Waveform1.vwf.vht|
+!s107 Waveform1.vwf.vht|
+!i113 1
+R16
+R17
+Alatch_sr_nor_arch
+R6
+R7
+DEx4 work 24 latch_sr_nor_vhd_vec_tst 0 22 DHmRg1bHn`0k8:ZhEcoH;2
+!i122 3
+l49
+R27
+VVM8Cc?2NbB5i`]RkkVcHB1
+!s100 LIVPcCKzZU504TE^^KmfM2
+R11
+32
+R31
+!i10b 1
+R32
+R38
+Z39 !s107 Waveform1.vwf.vht|
+!i113 1
+R16
+R17

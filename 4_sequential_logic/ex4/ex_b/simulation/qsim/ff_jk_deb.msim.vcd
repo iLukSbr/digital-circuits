@@ -1,0 +1,622 @@
+$comment
+	File created using the following command:
+		vcd file ff_jk_deb.msim.vcd -direction
+$end
+$date
+	Fri May 03 08:13:56 2024
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module ff_jk_deb_vhd_vec_tst $end
+$var wire 1 ! clk_50m $end
+$var wire 1 " clk_button $end
+$var wire 1 # clrn $end
+$var wire 1 $ j $end
+$var wire 1 % k $end
+$var wire 1 & prn $end
+$var wire 1 ' q $end
+$var wire 1 ( qn $end
+
+$scope module i1 $end
+$var wire 1 ) gnd $end
+$var wire 1 * vcc $end
+$var wire 1 + unknown $end
+$var wire 1 , devoe $end
+$var wire 1 - devclrn $end
+$var wire 1 . devpor $end
+$var wire 1 / ww_devoe $end
+$var wire 1 0 ww_devclrn $end
+$var wire 1 1 ww_devpor $end
+$var wire 1 2 ww_j $end
+$var wire 1 3 ww_k $end
+$var wire 1 4 ww_clrn $end
+$var wire 1 5 ww_prn $end
+$var wire 1 6 ww_clk_button $end
+$var wire 1 7 ww_clk_50m $end
+$var wire 1 8 ww_q $end
+$var wire 1 9 ww_qn $end
+$var wire 1 : \clk_50m~combout\ $end
+$var wire 1 ; \clk_div_10ms|P_div:count[5]~regout\ $end
+$var wire 1 < \clk_div_10ms|Add0~10_combout\ $end
+$var wire 1 = \clk_div_10ms|P_div:count[0]~regout\ $end
+$var wire 1 > \clk_div_10ms|Add0~12\ $end
+$var wire 1 ? \clk_div_10ms|Add0~12COUT1_91\ $end
+$var wire 1 @ \clk_div_10ms|Add0~15_combout\ $end
+$var wire 1 A \clk_div_10ms|P_div:count[1]~regout\ $end
+$var wire 1 B \clk_div_10ms|Add0~17\ $end
+$var wire 1 C \clk_div_10ms|Add0~17COUT1_92\ $end
+$var wire 1 D \clk_div_10ms|Add0~20_combout\ $end
+$var wire 1 E \clk_div_10ms|P_div:count[2]~regout\ $end
+$var wire 1 F \clk_div_10ms|Add0~22\ $end
+$var wire 1 G \clk_div_10ms|Add0~22COUT1_93\ $end
+$var wire 1 H \clk_div_10ms|Add0~25_combout\ $end
+$var wire 1 I \clk_div_10ms|P_div:count[3]~regout\ $end
+$var wire 1 J \clk_div_10ms|Add0~27\ $end
+$var wire 1 K \clk_div_10ms|Add0~30_combout\ $end
+$var wire 1 L \clk_div_10ms|P_div:count[4]~regout\ $end
+$var wire 1 M \clk_div_10ms|Add0~32\ $end
+$var wire 1 N \clk_div_10ms|Add0~32COUT1_94\ $end
+$var wire 1 O \clk_div_10ms|Add0~40_combout\ $end
+$var wire 1 P \clk_div_10ms|P_div:count[6]~regout\ $end
+$var wire 1 Q \clk_div_10ms|Add0~42\ $end
+$var wire 1 R \clk_div_10ms|Add0~42COUT1_95\ $end
+$var wire 1 S \clk_div_10ms|Add0~45_combout\ $end
+$var wire 1 T \clk_div_10ms|P_div:count[7]~regout\ $end
+$var wire 1 U \clk_div_10ms|Add0~47\ $end
+$var wire 1 V \clk_div_10ms|Add0~47COUT1_96\ $end
+$var wire 1 W \clk_div_10ms|Add0~35_combout\ $end
+$var wire 1 X \clk_div_10ms|Equal0~1_combout\ $end
+$var wire 1 Y \clk_div_10ms|Equal0~0_combout\ $end
+$var wire 1 Z \clk_div_10ms|P_div:count[12]~regout\ $end
+$var wire 1 [ \clk_div_10ms|Add0~37\ $end
+$var wire 1 \ \clk_div_10ms|Add0~37COUT1_97\ $end
+$var wire 1 ] \clk_div_10ms|Add0~50_combout\ $end
+$var wire 1 ^ \clk_div_10ms|P_div:count[8]~regout\ $end
+$var wire 1 _ \clk_div_10ms|Add0~52\ $end
+$var wire 1 ` \clk_div_10ms|Add0~55_combout\ $end
+$var wire 1 a \clk_div_10ms|P_div:count[9]~regout\ $end
+$var wire 1 b \clk_div_10ms|Add0~57\ $end
+$var wire 1 c \clk_div_10ms|Add0~57COUT1_98\ $end
+$var wire 1 d \clk_div_10ms|Add0~60_combout\ $end
+$var wire 1 e \clk_div_10ms|P_div:count[10]~regout\ $end
+$var wire 1 f \clk_div_10ms|Add0~62\ $end
+$var wire 1 g \clk_div_10ms|Add0~62COUT1_99\ $end
+$var wire 1 h \clk_div_10ms|Add0~65_combout\ $end
+$var wire 1 i \clk_div_10ms|P_div:count[11]~regout\ $end
+$var wire 1 j \clk_div_10ms|Add0~67\ $end
+$var wire 1 k \clk_div_10ms|Add0~67COUT1_100\ $end
+$var wire 1 l \clk_div_10ms|Add0~70_combout\ $end
+$var wire 1 m \clk_div_10ms|P_div:count[15]~regout\ $end
+$var wire 1 n \clk_div_10ms|Add0~72\ $end
+$var wire 1 o \clk_div_10ms|Add0~72COUT1_101\ $end
+$var wire 1 p \clk_div_10ms|Add0~85_combout\ $end
+$var wire 1 q \clk_div_10ms|P_div:count[13]~regout\ $end
+$var wire 1 r \clk_div_10ms|Add0~87\ $end
+$var wire 1 s \clk_div_10ms|Add0~75_combout\ $end
+$var wire 1 t \clk_div_10ms|P_div:count[14]~regout\ $end
+$var wire 1 u \clk_div_10ms|Add0~77\ $end
+$var wire 1 v \clk_div_10ms|Add0~77COUT1_102\ $end
+$var wire 1 w \clk_div_10ms|Add0~80_combout\ $end
+$var wire 1 x \clk_div_10ms|Equal0~3_combout\ $end
+$var wire 1 y \clk_div_10ms|Equal0~2_combout\ $end
+$var wire 1 z \clk_div_10ms|Equal0~4_combout\ $end
+$var wire 1 { \clk_div_10ms|P_div:count[17]~regout\ $end
+$var wire 1 | \clk_div_10ms|Add0~82\ $end
+$var wire 1 } \clk_div_10ms|Add0~82COUT1_103\ $end
+$var wire 1 ~ \clk_div_10ms|Add0~2\ $end
+$var wire 1 !! \clk_div_10ms|Add0~2COUT1_104\ $end
+$var wire 1 "! \clk_div_10ms|Add0~5_combout\ $end
+$var wire 1 #! \clk_div_10ms|P_div:count[16]~regout\ $end
+$var wire 1 $! \clk_div_10ms|Add0~0_combout\ $end
+$var wire 1 %! \clk_div_10ms|temp~regout\ $end
+$var wire 1 &! \clk_button~combout\ $end
+$var wire 1 '! \deb|result~0_combout\ $end
+$var wire 1 (! \deb|result~regout\ $end
+$var wire 1 )! \k~combout\ $end
+$var wire 1 *! \j~combout\ $end
+$var wire 1 +! \clrn~combout\ $end
+$var wire 1 ,! \prn~combout\ $end
+$var wire 1 -! \qstate~regout\ $end
+$var wire 1 .! \deb|flipflops\ [1] $end
+$var wire 1 /! \deb|flipflops\ [0] $end
+$var wire 1 0! \deb|counter_out\ [1] $end
+$var wire 1 1! \deb|counter_out\ [0] $end
+$var wire 1 2! \ALT_INV_prn~combout\ $end
+$var wire 1 3! \ALT_INV_clrn~combout\ $end
+$var wire 1 4! \ALT_INV_qstate~regout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x!
+0"
+0#
+0$
+0%
+0&
+0'
+1(
+0)
+1*
+x+
+1,
+1-
+1.
+1/
+10
+11
+02
+03
+04
+05
+06
+x7
+08
+19
+x:
+0;
+1<
+0=
+0>
+0?
+0@
+0A
+1B
+1C
+0D
+0E
+0F
+0G
+0H
+0I
+1J
+0K
+0L
+0M
+0N
+0O
+0P
+1Q
+1R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+1[
+1\
+0]
+0^
+0_
+0`
+0a
+1b
+1c
+0d
+0e
+0f
+0g
+0h
+0i
+1j
+1k
+0l
+0m
+0n
+0o
+0p
+0q
+1r
+0s
+0t
+0u
+0v
+0w
+0x
+1y
+0z
+0{
+1|
+1}
+0~
+0!!
+0"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+0-!
+12!
+13!
+14!
+0.!
+0/!
+00!
+01!
+$end
+#35000
+1"
+16
+1&!
+#45000
+1%
+13
+1)!
+#55000
+1$
+12
+1*!
+#70000
+0"
+06
+0&!
+#90000
+0%
+03
+0)!
+#100000
+1&
+15
+1,!
+02!
+#105000
+1"
+16
+1&!
+#110000
+0$
+02
+0*!
+#135000
+1%
+13
+1)!
+#140000
+0"
+06
+0&!
+#150000
+1#
+14
+1+!
+03!
+#165000
+1$
+12
+1*!
+#175000
+1"
+16
+1&!
+#180000
+0%
+03
+0)!
+#200000
+0&
+05
+0,!
+12!
+1-!
+04!
+18
+09
+1'
+0(
+#210000
+0"
+06
+0&!
+#220000
+0$
+02
+0*!
+#225000
+1%
+13
+1)!
+#245000
+1"
+16
+1&!
+#270000
+0%
+03
+0)!
+#275000
+1$
+12
+1*!
+#280000
+0"
+06
+0&!
+#300000
+1&
+0#
+15
+04
+0+!
+1,!
+02!
+13!
+0-!
+14!
+08
+19
+0'
+1(
+#315000
+1"
+1%
+16
+13
+1)!
+1&!
+#330000
+0$
+02
+0*!
+#350000
+0"
+06
+0&!
+#360000
+0%
+03
+0)!
+#385000
+1"
+1$
+16
+12
+1*!
+1&!
+#400000
+0&
+05
+0,!
+12!
+#405000
+1%
+13
+1)!
+#420000
+0"
+06
+0&!
+#440000
+0$
+02
+0*!
+#450000
+0%
+1#
+03
+14
+1+!
+0)!
+03!
+1-!
+04!
+18
+09
+1'
+0(
+#455000
+1"
+16
+1&!
+#490000
+0"
+06
+0&!
+#495000
+1%
+1$
+13
+12
+1*!
+1)!
+#500000
+1&
+15
+1,!
+02!
+#525000
+1"
+16
+1&!
+#540000
+0%
+03
+0)!
+#550000
+0$
+02
+0*!
+#560000
+0"
+06
+0&!
+#585000
+1%
+13
+1)!
+#595000
+1"
+16
+1&!
+#600000
+0&
+0#
+05
+04
+0+!
+0,!
+12!
+13!
+0-!
+14!
+08
+19
+0'
+1(
+#605000
+1$
+12
+1*!
+#630000
+0"
+0%
+06
+03
+0)!
+0&!
+#660000
+0$
+02
+0*!
+#665000
+1"
+16
+1&!
+#675000
+1%
+13
+1)!
+#700000
+0"
+1&
+06
+15
+1,!
+0&!
+02!
+#715000
+1$
+12
+1*!
+#720000
+0%
+03
+0)!
+#735000
+1"
+16
+1&!
+#750000
+1#
+14
+1+!
+03!
+#765000
+1%
+13
+1)!
+#770000
+0"
+0$
+06
+02
+0*!
+0&!
+#800000
+0&
+05
+0,!
+12!
+1-!
+04!
+18
+09
+1'
+0(
+#805000
+1"
+16
+1&!
+#810000
+0%
+03
+0)!
+#825000
+1$
+12
+1*!
+#840000
+0"
+06
+0&!
+#855000
+1%
+13
+1)!
+#875000
+1"
+16
+1&!
+#880000
+0$
+02
+0*!
+#900000
+0%
+1&
+0#
+03
+15
+04
+0+!
+1,!
+0)!
+02!
+13!
+0-!
+14!
+08
+19
+0'
+1(
+#910000
+0"
+06
+0&!
+#935000
+1$
+12
+1*!
+#945000
+1"
+1%
+16
+13
+1)!
+1&!
+#980000
+0"
+06
+0&!
+#990000
+0%
+0$
+03
+02
+0*!
+0)!
+#1000000

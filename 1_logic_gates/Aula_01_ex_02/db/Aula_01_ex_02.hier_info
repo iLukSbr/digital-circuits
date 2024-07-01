@@ -1,0 +1,14 @@
+|Conv_bin_gray
+bin_i[0] => gray_o.IN0
+bin_i[1] => gray_o.IN0
+bin_i[1] => gray_o.IN1
+bin_i[2] => gray_o.IN0
+bin_i[2] => gray_o.IN1
+bin_i[3] => gray_o.IN1
+bin_i[3] => gray_o[3].DATAIN
+gray_o[0] << gray_o.DB_MAX_OUTPUT_PORT_TYPE
+gray_o[1] << gray_o.DB_MAX_OUTPUT_PORT_TYPE
+gray_o[2] << gray_o.DB_MAX_OUTPUT_PORT_TYPE
+gray_o[3] << bin_i[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

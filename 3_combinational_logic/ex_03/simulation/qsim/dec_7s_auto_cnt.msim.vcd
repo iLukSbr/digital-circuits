@@ -1,0 +1,384 @@
+$comment
+	File created using the following command:
+		vcd file dec_7s_auto_cnt.msim.vcd -direction
+$end
+$date
+	Fri Apr 12 20:46:56 2024
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module dec_7s_auto_cnt_vhd_vec_tst $end
+$var wire 1 ! c_7s [6] $end
+$var wire 1 " c_7s [5] $end
+$var wire 1 # c_7s [4] $end
+$var wire 1 $ c_7s [3] $end
+$var wire 1 % c_7s [2] $end
+$var wire 1 & c_7s [1] $end
+$var wire 1 ' c_7s [0] $end
+$var wire 1 ( clk $end
+$var wire 1 ) clr $end
+
+$scope module i1 $end
+$var wire 1 * gnd $end
+$var wire 1 + vcc $end
+$var wire 1 , unknown $end
+$var wire 1 - devoe $end
+$var wire 1 . devclrn $end
+$var wire 1 / devpor $end
+$var wire 1 0 ww_devoe $end
+$var wire 1 1 ww_devclrn $end
+$var wire 1 2 ww_devpor $end
+$var wire 1 3 ww_clk $end
+$var wire 1 4 ww_clr $end
+$var wire 1 5 ww_c_7s [6] $end
+$var wire 1 6 ww_c_7s [5] $end
+$var wire 1 7 ww_c_7s [4] $end
+$var wire 1 8 ww_c_7s [3] $end
+$var wire 1 9 ww_c_7s [2] $end
+$var wire 1 : ww_c_7s [1] $end
+$var wire 1 ; ww_c_7s [0] $end
+$var wire 1 < \clk~combout\ $end
+$var wire 1 = \~GND~combout\ $end
+$var wire 1 > \clr~combout\ $end
+$var wire 1 ? \cnt|LPM_COUNTER_component|auto_generated|counter_cella0~COUT\ $end
+$var wire 1 @ \cnt|LPM_COUNTER_component|auto_generated|counter_cella0~COUTCOUT1_1\ $end
+$var wire 1 A \cnt|LPM_COUNTER_component|auto_generated|counter_cella1~COUT\ $end
+$var wire 1 B \cnt|LPM_COUNTER_component|auto_generated|counter_cella1~COUTCOUT1_1\ $end
+$var wire 1 C \cnt|LPM_COUNTER_component|auto_generated|counter_cella2~COUT\ $end
+$var wire 1 D \cnt|LPM_COUNTER_component|auto_generated|counter_cella3~COUT\ $end
+$var wire 1 E \cnt|LPM_COUNTER_component|auto_generated|counter_cella3~COUTCOUT1_1\ $end
+$var wire 1 F \cnt|LPM_COUNTER_component|auto_generated|counter_cella4~COUT\ $end
+$var wire 1 G \cnt|LPM_COUNTER_component|auto_generated|counter_cella4~COUTCOUT1_1\ $end
+$var wire 1 H \cnt|LPM_COUNTER_component|auto_generated|counter_cella5~COUT\ $end
+$var wire 1 I \cnt|LPM_COUNTER_component|auto_generated|counter_cella5~COUTCOUT1_1\ $end
+$var wire 1 J \cnt|LPM_COUNTER_component|auto_generated|counter_cella6~COUT\ $end
+$var wire 1 K \cnt|LPM_COUNTER_component|auto_generated|counter_cella6~COUTCOUT1_1\ $end
+$var wire 1 L \cnt|LPM_COUNTER_component|auto_generated|counter_cella7~COUT\ $end
+$var wire 1 M \cnt|LPM_COUNTER_component|auto_generated|counter_cella8~COUT\ $end
+$var wire 1 N \cnt|LPM_COUNTER_component|auto_generated|counter_cella8~COUTCOUT1_1\ $end
+$var wire 1 O \cnt|LPM_COUNTER_component|auto_generated|counter_cella9~COUT\ $end
+$var wire 1 P \cnt|LPM_COUNTER_component|auto_generated|counter_cella9~COUTCOUT1_1\ $end
+$var wire 1 Q \cnt|LPM_COUNTER_component|auto_generated|counter_cella10~COUT\ $end
+$var wire 1 R \cnt|LPM_COUNTER_component|auto_generated|counter_cella10~COUTCOUT1_1\ $end
+$var wire 1 S \cnt|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~3_combout\ $end
+$var wire 1 T \cnt|LPM_COUNTER_component|auto_generated|counter_cella11~COUT\ $end
+$var wire 1 U \cnt|LPM_COUNTER_component|auto_generated|counter_cella11~COUTCOUT1_1\ $end
+$var wire 1 V \cnt|LPM_COUNTER_component|auto_generated|counter_cella12~COUT\ $end
+$var wire 1 W \cnt|LPM_COUNTER_component|auto_generated|counter_cella13~COUT\ $end
+$var wire 1 X \cnt|LPM_COUNTER_component|auto_generated|counter_cella13~COUTCOUT1_1\ $end
+$var wire 1 Y \cnt|LPM_COUNTER_component|auto_generated|counter_cella14~COUT\ $end
+$var wire 1 Z \cnt|LPM_COUNTER_component|auto_generated|counter_cella14~COUTCOUT1_1\ $end
+$var wire 1 [ \cnt|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~4_combout\ $end
+$var wire 1 \ \cnt|LPM_COUNTER_component|auto_generated|counter_cella15~COUT\ $end
+$var wire 1 ] \cnt|LPM_COUNTER_component|auto_generated|counter_cella15~COUTCOUT1_1\ $end
+$var wire 1 ^ \cnt|LPM_COUNTER_component|auto_generated|counter_cella16~COUT\ $end
+$var wire 1 _ \cnt|LPM_COUNTER_component|auto_generated|counter_cella16~COUTCOUT1_1\ $end
+$var wire 1 ` \cnt|LPM_COUNTER_component|auto_generated|counter_cella17~COUT\ $end
+$var wire 1 a \cnt|LPM_COUNTER_component|auto_generated|counter_cella18~COUT\ $end
+$var wire 1 b \cnt|LPM_COUNTER_component|auto_generated|counter_cella18~COUTCOUT1_1\ $end
+$var wire 1 c \cnt|LPM_COUNTER_component|auto_generated|counter_cella19~COUT\ $end
+$var wire 1 d \cnt|LPM_COUNTER_component|auto_generated|counter_cella19~COUTCOUT1_1\ $end
+$var wire 1 e \cnt|LPM_COUNTER_component|auto_generated|counter_cella20~COUT\ $end
+$var wire 1 f \cnt|LPM_COUNTER_component|auto_generated|counter_cella20~COUTCOUT1_1\ $end
+$var wire 1 g \cnt|LPM_COUNTER_component|auto_generated|counter_cella21~COUT\ $end
+$var wire 1 h \cnt|LPM_COUNTER_component|auto_generated|counter_cella21~COUTCOUT1_1\ $end
+$var wire 1 i \cnt|LPM_COUNTER_component|auto_generated|counter_cella22~COUT\ $end
+$var wire 1 j \cnt|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~6_combout\ $end
+$var wire 1 k \cnt|LPM_COUNTER_component|auto_generated|counter_cella23~COUT\ $end
+$var wire 1 l \cnt|LPM_COUNTER_component|auto_generated|counter_cella23~COUTCOUT1_1\ $end
+$var wire 1 m \cnt|LPM_COUNTER_component|auto_generated|counter_cella24~COUT\ $end
+$var wire 1 n \cnt|LPM_COUNTER_component|auto_generated|counter_cella24~COUTCOUT1_1\ $end
+$var wire 1 o \cnt|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~5_combout\ $end
+$var wire 1 p \cnt|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~7_combout\ $end
+$var wire 1 q \cnt|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~1_combout\ $end
+$var wire 1 r \cnt|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~0_combout\ $end
+$var wire 1 s \cnt|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~2_combout\ $end
+$var wire 1 t \cnt|LPM_COUNTER_component|auto_generated|counter_cella25~COUT\ $end
+$var wire 1 u \cnt|LPM_COUNTER_component|auto_generated|counter_cella25~COUTCOUT1_1\ $end
+$var wire 1 v \cnt|LPM_COUNTER_component|auto_generated|modulus_trigger\ $end
+$var wire 1 w \cnt1|LPM_COUNTER_component|auto_generated|counter_cella0~COUT\ $end
+$var wire 1 x \cnt1|LPM_COUNTER_component|auto_generated|counter_cella0~COUTCOUT1_1\ $end
+$var wire 1 y \cnt1|LPM_COUNTER_component|auto_generated|counter_cella1~COUT\ $end
+$var wire 1 z \cnt1|LPM_COUNTER_component|auto_generated|counter_cella1~COUTCOUT1_1\ $end
+$var wire 1 { \cnt1|LPM_COUNTER_component|auto_generated|counter_cella2~COUT\ $end
+$var wire 1 | \cnt1|LPM_COUNTER_component|auto_generated|counter_cella2~COUTCOUT1_1\ $end
+$var wire 1 } \Mux6~0_combout\ $end
+$var wire 1 ~ \Mux5~0_combout\ $end
+$var wire 1 !! \Mux4~0_combout\ $end
+$var wire 1 "! \Mux3~0_combout\ $end
+$var wire 1 #! \Mux2~0_combout\ $end
+$var wire 1 $! \Mux1~0_combout\ $end
+$var wire 1 %! \Mux0~0_combout\ $end
+$var wire 1 &! \cnt1|LPM_COUNTER_component|auto_generated|safe_q\ [3] $end
+$var wire 1 '! \cnt1|LPM_COUNTER_component|auto_generated|safe_q\ [2] $end
+$var wire 1 (! \cnt1|LPM_COUNTER_component|auto_generated|safe_q\ [1] $end
+$var wire 1 )! \cnt1|LPM_COUNTER_component|auto_generated|safe_q\ [0] $end
+$var wire 1 *! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [25] $end
+$var wire 1 +! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [24] $end
+$var wire 1 ,! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [23] $end
+$var wire 1 -! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [22] $end
+$var wire 1 .! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [21] $end
+$var wire 1 /! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [20] $end
+$var wire 1 0! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [19] $end
+$var wire 1 1! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [18] $end
+$var wire 1 2! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [17] $end
+$var wire 1 3! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [16] $end
+$var wire 1 4! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [15] $end
+$var wire 1 5! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [14] $end
+$var wire 1 6! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [13] $end
+$var wire 1 7! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [12] $end
+$var wire 1 8! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [11] $end
+$var wire 1 9! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [10] $end
+$var wire 1 :! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [9] $end
+$var wire 1 ;! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [8] $end
+$var wire 1 <! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [7] $end
+$var wire 1 =! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [6] $end
+$var wire 1 >! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [5] $end
+$var wire 1 ?! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [4] $end
+$var wire 1 @! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [3] $end
+$var wire 1 A! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [2] $end
+$var wire 1 B! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [1] $end
+$var wire 1 C! \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [0] $end
+$var wire 1 D! \cnt|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire\ [0] $end
+$var wire 1 E! \ALT_INV_clr~combout\ $end
+$var wire 1 F! \ALT_INV_Mux0~0_combout\ $end
+$var wire 1 G! \ALT_INV_Mux1~0_combout\ $end
+$var wire 1 H! \ALT_INV_Mux2~0_combout\ $end
+$var wire 1 I! \ALT_INV_Mux3~0_combout\ $end
+$var wire 1 J! \ALT_INV_Mux4~0_combout\ $end
+$var wire 1 K! \ALT_INV_Mux5~0_combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0(
+0)
+0*
+1+
+x,
+1-
+1.
+1/
+10
+11
+12
+03
+04
+0<
+0=
+0>
+0?
+0@
+1A
+1B
+0C
+1D
+1E
+0F
+0G
+1H
+1I
+0J
+0K
+1L
+0M
+0N
+1O
+1P
+0Q
+0R
+0S
+1T
+1U
+0V
+1W
+1X
+0Y
+0Z
+1[
+1\
+1]
+0^
+0_
+1`
+0a
+0b
+1c
+1d
+0e
+0f
+1g
+1h
+0i
+1j
+1k
+1l
+0m
+0n
+1o
+1p
+1q
+1r
+1s
+1t
+1u
+0v
+0w
+0x
+1y
+1z
+0{
+0|
+0}
+0~
+0!!
+0"!
+0#!
+0$!
+0%!
+1E!
+1F!
+1G!
+1H!
+1I!
+1J!
+1K!
+15
+16
+17
+18
+19
+1:
+0;
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+02!
+03!
+04!
+05!
+06!
+07!
+08!
+09!
+0:!
+0;!
+0<!
+0=!
+0>!
+0?!
+0@!
+0A!
+0B!
+0C!
+1D!
+1!
+1"
+1#
+1$
+1%
+1&
+0'
+$end
+#50000
+1(
+13
+1<
+#100000
+0(
+03
+0<
+#150000
+1(
+13
+1<
+#200000
+0(
+03
+0<
+#250000
+1(
+13
+1<
+#300000
+0(
+03
+0<
+#350000
+1(
+13
+1<
+#400000
+0(
+03
+0<
+#450000
+1(
+13
+1<
+#490000
+1)
+14
+1>
+0E!
+#500000
+0(
+03
+0<
+#540000
+0)
+04
+0>
+1E!
+#550000
+1(
+13
+1<
+#600000
+0(
+03
+0<
+#650000
+1(
+13
+1<
+#700000
+0(
+03
+0<
+#750000
+1(
+13
+1<
+#800000
+0(
+03
+0<
+#850000
+1(
+13
+1<
+#900000
+0(
+03
+0<
+#950000
+1(
+13
+1<
+#1000000

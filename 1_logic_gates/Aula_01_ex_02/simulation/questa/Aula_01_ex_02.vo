@@ -1,0 +1,246 @@
+// Copyright (C) 2023  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition"
+
+// DATE "03/15/2024 21:24:58"
+
+// 
+// Device: Altera EPM240T100C5 Package TQFP100
+// 
+
+// 
+// This Verilog file should be used for Questa Intel FPGA (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module Conv_bin_gray (
+	bin_i,
+	gray_o);
+input 	[3:0] bin_i;
+output 	[3:0] gray_o;
+
+// Design Ports Information
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \gray_o~0_combout ;
+wire \gray_o~1_combout ;
+wire \gray_o~2_combout ;
+wire [3:0] \bin_i~combout ;
+
+
+// Location: PIN_51,	 I/O Standard: 3.3V Schmitt Trigger Input,	 Current Strength: Default
+maxii_io \bin_i[1]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\bin_i~combout [1]),
+	.padio(bin_i[1]));
+// synopsys translate_off
+defparam \bin_i[1]~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_53,	 I/O Standard: 3.3V Schmitt Trigger Input,	 Current Strength: Default
+maxii_io \bin_i[0]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\bin_i~combout [0]),
+	.padio(bin_i[0]));
+// synopsys translate_off
+defparam \bin_i[0]~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X6_Y1_N2
+maxii_lcell \gray_o~0 (
+// Equation(s):
+// \gray_o~0_combout  = ((\bin_i~combout [1] $ (\bin_i~combout [0])))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\bin_i~combout [1]),
+	.datad(\bin_i~combout [0]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\gray_o~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \gray_o~0 .lut_mask = "0ff0";
+defparam \gray_o~0 .operation_mode = "normal";
+defparam \gray_o~0 .output_mode = "comb_only";
+defparam \gray_o~0 .register_cascade_mode = "off";
+defparam \gray_o~0 .sum_lutc_input = "datac";
+defparam \gray_o~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_52,	 I/O Standard: 3.3V Schmitt Trigger Input,	 Current Strength: Default
+maxii_io \bin_i[2]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\bin_i~combout [2]),
+	.padio(bin_i[2]));
+// synopsys translate_off
+defparam \bin_i[2]~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X6_Y2_N2
+maxii_lcell \gray_o~1 (
+// Equation(s):
+// \gray_o~1_combout  = \bin_i~combout [1] $ ((((\bin_i~combout [2]))))
+
+	.clk(gnd),
+	.dataa(\bin_i~combout [1]),
+	.datab(vcc),
+	.datac(\bin_i~combout [2]),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\gray_o~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \gray_o~1 .lut_mask = "5a5a";
+defparam \gray_o~1 .operation_mode = "normal";
+defparam \gray_o~1 .output_mode = "comb_only";
+defparam \gray_o~1 .register_cascade_mode = "off";
+defparam \gray_o~1 .sum_lutc_input = "datac";
+defparam \gray_o~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_50,	 I/O Standard: 3.3V Schmitt Trigger Input,	 Current Strength: Default
+maxii_io \bin_i[3]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\bin_i~combout [3]),
+	.padio(bin_i[3]));
+// synopsys translate_off
+defparam \bin_i[3]~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N2
+maxii_lcell \gray_o~2 (
+// Equation(s):
+// \gray_o~2_combout  = (\bin_i~combout [3] $ (((\bin_i~combout [2]))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\bin_i~combout [3]),
+	.datac(vcc),
+	.datad(\bin_i~combout [2]),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\gray_o~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \gray_o~2 .lut_mask = "33cc";
+defparam \gray_o~2 .operation_mode = "normal";
+defparam \gray_o~2 .output_mode = "comb_only";
+defparam \gray_o~2 .register_cascade_mode = "off";
+defparam \gray_o~2 .sum_lutc_input = "datac";
+defparam \gray_o~2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_34,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \gray_o[0]~I (
+	.datain(\gray_o~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(gray_o[0]));
+// synopsys translate_off
+defparam \gray_o[0]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_42,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \gray_o[1]~I (
+	.datain(\gray_o~1_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(gray_o[1]));
+// synopsys translate_off
+defparam \gray_o[1]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_35,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \gray_o[2]~I (
+	.datain(\gray_o~2_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(gray_o[2]));
+// synopsys translate_off
+defparam \gray_o[2]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_43,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \gray_o[3]~I (
+	.datain(\bin_i~combout [3]),
+	.oe(vcc),
+	.combout(),
+	.padio(gray_o[3]));
+// synopsys translate_off
+defparam \gray_o[3]~I .operation_mode = "output";
+// synopsys translate_on
+
+endmodule

@@ -1,0 +1,68 @@
+# Ajustar o nome da Top level entity (nome do arquivo vhdl) de acordo com o projeto:
+set_global_assignment -name TOP_LEVEL_ENTITY cronometro
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+# set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED WITH WEAK PULL-UP"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS OUTPUT DRIVING GROUND"
+#=============================================================================================
+# Cristal e led do kit:
+# Clock de 50 MHz - descomentar se utilizado:
+set_location_assignment PIN_12 -to clk_50M
+# led do kit - descomentar se usado:
+# set_location_assignment PIN_77 -to led
+#=============================================================================================
+# Pino extra:
+# set_location_assignment PIN_26 -to ch0
+# set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to ch0
+# set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to ch0
+#=============================================================================================
+# Conexões para cabo flat em conector P2 do kit:
+# Botões - todas com pull-up conectado e schmitt trigger input: 
+#set_location_assignment PIN_50 -to ch1
+#set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to ch1
+#set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to ch1
+set_location_assignment PIN_52 -to start_stop
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to start_stop
+set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to start_stop
+set_location_assignment PIN_51 -to ud
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to ud
+set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to ud
+set_location_assignment PIN_53 -to z
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to z
+set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to z
+#=============================================================================================
+# Displays:
+# Segmentos do disp1 (esquerdo):
+set_location_assignment PIN_33 -to dezena[6]
+#set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to a1
+set_location_assignment PIN_35 -to dezena[5]
+#set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to b1
+set_location_assignment PIN_37 -to dezena[4]
+#set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to c1
+set_location_assignment PIN_39 -to dezena[3]
+#set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to d1
+set_location_assignment PIN_41 -to dezena[2]
+#set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to e1
+set_location_assignment PIN_43 -to dezena[1]
+#set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to f1
+set_location_assignment PIN_47 -to dezena[0]
+#set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to g1
+set_location_assignment PIN_49 -to dp1
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to dp1
+#=============================================================================================
+# Segmentos do disp2 (direito):
+set_location_assignment PIN_30 -to unidade[6]
+#set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to a2
+set_location_assignment PIN_34 -to unidade[5]
+#set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to b2
+set_location_assignment PIN_36 -to unidade[4]
+#set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to c2
+set_location_assignment PIN_38 -to unidade[3]
+#set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to d2
+set_location_assignment PIN_40 -to unidade[2]
+#set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to e2
+set_location_assignment PIN_42 -to unidade[1]
+#set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to f2
+set_location_assignment PIN_44 -to unidade[0]
+#set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to g2
+set_location_assignment PIN_48 -to dp2
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to dp2

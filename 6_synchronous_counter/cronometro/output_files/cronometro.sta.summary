@@ -1,0 +1,65 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'clk_50M'
+Slack : -6.728
+TNS   : -202.927
+
+Type  : Setup 'basic_divider:clk_div|temp'
+Slack : -3.029
+TNS   : -18.174
+
+Type  : Setup 'basic_divider:clk_div2|temp'
+Slack : -1.068
+TNS   : -5.740
+
+Type  : Setup 'debounce:deb_start_stop|result'
+Slack : -0.547
+TNS   : -0.547
+
+Type  : Setup 'debounce:deb_ud|result'
+Slack : -0.393
+TNS   : -0.393
+
+Type  : Hold 'basic_divider:clk_div2|temp'
+Slack : -1.774
+TNS   : -3.179
+
+Type  : Hold 'clk_50M'
+Slack : -1.136
+TNS   : -2.082
+
+Type  : Hold 'basic_divider:clk_div|temp'
+Slack : -0.126
+TNS   : -0.647
+
+Type  : Hold 'debounce:deb_ud|result'
+Slack : 1.047
+TNS   : 0.000
+
+Type  : Hold 'debounce:deb_start_stop|result'
+Slack : 1.201
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clk_50M'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'basic_divider:clk_div2|temp'
+Slack : 0.334
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'basic_divider:clk_div|temp'
+Slack : 0.334
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'debounce:deb_start_stop|result'
+Slack : 0.334
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'debounce:deb_ud|result'
+Slack : 0.334
+TNS   : 0.000
+
+------------------------------------------------------------

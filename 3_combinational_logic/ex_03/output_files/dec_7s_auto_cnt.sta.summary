@@ -1,0 +1,29 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'clk'
+Slack : -10.282
+TNS   : -254.060
+
+Type  : Setup 'cnt_auto:cnt|lpm_counter:LPM_COUNTER_component|cntr_lqj:auto_generated|safe_q[0]'
+Slack : -4.281
+TNS   : -15.553
+
+Type  : Hold 'clk'
+Slack : -2.071
+TNS   : -8.308
+
+Type  : Hold 'cnt_auto:cnt|lpm_counter:LPM_COUNTER_component|cntr_lqj:auto_generated|safe_q[0]'
+Slack : 0.431
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Minimum Pulse Width 'cnt_auto:cnt|lpm_counter:LPM_COUNTER_component|cntr_lqj:auto_generated|safe_q[0]'
+Slack : -1.070
+TNS   : -16.600
+
+------------------------------------------------------------

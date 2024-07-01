@@ -1,0 +1,11 @@
+Fitter Status : Successful - Fri May  3 19:45:35 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : ff_jk_deb
+Top-level Entity Name : ff_jk_deb
+Family : MAX II
+Device : EPM240T100C5
+Timing Models : Final
+Total logic elements : 49 / 240 ( 20 % )
+Total pins : 22 / 80 ( 28 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

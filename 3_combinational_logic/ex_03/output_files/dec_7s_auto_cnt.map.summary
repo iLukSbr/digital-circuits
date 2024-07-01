@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Fri Apr 12 20:48:43 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : dec_7s_auto_cnt
+Top-level Entity Name : dec_7s_auto_cnt
+Family : MAX II
+Total logic elements : 48
+Total pins : 9
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

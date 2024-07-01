@@ -1,0 +1,9 @@
+|latch_d_nor
+enable => qn$latch.LATCH_ENABLE
+enable => q$latch.LATCH_ENABLE
+din => q$latch.DATAIN
+din => qn$latch.DATAIN
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qn$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

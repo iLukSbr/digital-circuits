@@ -1,0 +1,651 @@
+Timing Analyzer report for detector
+Fri Jun 28 21:41:17 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'clk_50M'
+ 12. Setup: 'divider:clk_div_1s|temp'
+ 13. Setup: 'divider:clk_div_10ms|temp'
+ 14. Hold: 'clk_50M'
+ 15. Hold: 'divider:clk_div_10ms|temp'
+ 16. Hold: 'divider:clk_div_1s|temp'
+ 17. Setup Transfers
+ 18. Hold Transfers
+ 19. Report TCCS
+ 20. Report RSKM
+ 21. Unconstrained Paths Summary
+ 22. Clock Status Summary
+ 23. Unconstrained Input Ports
+ 24. Unconstrained Output Ports
+ 25. Unconstrained Input Ports
+ 26. Unconstrained Output Ports
+ 27. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++--------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                        ;
++-----------------------+--------------------------------------------------------+
+; Quartus Prime Version ; Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                                 ;
+; Revision Name         ; detector                                               ;
+; Device Family         ; MAX II                                                 ;
+; Device Name           ; EPM240T100C5                                           ;
+; Timing Models         ; Final                                                  ;
+; Delay Model           ; Slow Model                                             ;
+; Rise/Fall Delays      ; Unavailable                                            ;
++-----------------------+--------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                               ;
++---------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------+
+; Clock Name                ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                       ;
++---------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------+
+; clk_50M                   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_50M }                   ;
+; divider:clk_div_1s|temp   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divider:clk_div_1s|temp }   ;
+; divider:clk_div_10ms|temp ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divider:clk_div_10ms|temp } ;
++---------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------+
+
+
++-----------------------------------------------------------------+
+; Fmax Summary                                                    ;
++------------+-----------------+---------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                ; Note ;
++------------+-----------------+---------------------------+------+
+; 79.06 MHz  ; 79.06 MHz       ; clk_50M                   ;      ;
+; 226.19 MHz ; 226.19 MHz      ; divider:clk_div_1s|temp   ;      ;
+; 322.27 MHz ; 322.27 MHz      ; divider:clk_div_10ms|temp ;      ;
++------------+-----------------+---------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------------+
+; Setup Summary                                       ;
++---------------------------+---------+---------------+
+; Clock                     ; Slack   ; End Point TNS ;
++---------------------------+---------+---------------+
+; clk_50M                   ; -11.649 ; -348.717      ;
+; divider:clk_div_1s|temp   ; -3.421  ; -13.192       ;
+; divider:clk_div_10ms|temp ; -2.103  ; -7.041        ;
++---------------------------+---------+---------------+
+
+
++----------------------------------------------------+
+; Hold Summary                                       ;
++---------------------------+--------+---------------+
+; Clock                     ; Slack  ; End Point TNS ;
++---------------------------+--------+---------------+
+; clk_50M                   ; -1.617 ; -3.119        ;
+; divider:clk_div_10ms|temp ; 1.696  ; 0.000         ;
+; divider:clk_div_1s|temp   ; 2.187  ; 0.000         ;
++---------------------------+--------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++----------------------------------------------------+
+; Minimum Pulse Width Summary                        ;
++---------------------------+--------+---------------+
+; Clock                     ; Slack  ; End Point TNS ;
++---------------------------+--------+---------------+
+; clk_50M                   ; -2.289 ; -2.289        ;
+; divider:clk_div_10ms|temp ; 0.234  ; 0.000         ;
+; divider:clk_div_1s|temp   ; 0.234  ; 0.000         ;
++---------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk_50M'                                                                                                                                          ;
++---------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; -11.649 ; divider:clk_div_1s|\P_div:count[12] ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 12.316     ;
+; -11.634 ; divider:clk_div_1s|\P_div:count[7]  ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 12.301     ;
+; -11.450 ; divider:clk_div_1s|\P_div:count[3]  ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 12.117     ;
+; -11.421 ; divider:clk_div_1s|\P_div:count[8]  ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 12.088     ;
+; -11.372 ; divider:clk_div_1s|\P_div:count[2]  ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 12.039     ;
+; -11.357 ; divider:clk_div_1s|\P_div:count[19] ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 12.024     ;
+; -11.310 ; divider:clk_div_1s|\P_div:count[9]  ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.977     ;
+; -11.285 ; divider:clk_div_1s|\P_div:count[14] ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.952     ;
+; -11.268 ; divider:clk_div_1s|\P_div:count[1]  ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.935     ;
+; -11.244 ; divider:clk_div_1s|\P_div:count[11] ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.911     ;
+; -11.201 ; divider:clk_div_1s|\P_div:count[13] ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.868     ;
+; -11.183 ; divider:clk_div_1s|\P_div:count[10] ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.850     ;
+; -11.161 ; divider:clk_div_1s|\P_div:count[12] ; divider:clk_div_1s|\P_div:count[22] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.828     ;
+; -11.160 ; divider:clk_div_1s|\P_div:count[12] ; divider:clk_div_1s|\P_div:count[18] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.827     ;
+; -11.155 ; divider:clk_div_1s|\P_div:count[12] ; divider:clk_div_1s|\P_div:count[20] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.822     ;
+; -11.154 ; divider:clk_div_1s|\P_div:count[12] ; divider:clk_div_1s|\P_div:count[11] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.821     ;
+; -11.154 ; divider:clk_div_1s|\P_div:count[12] ; divider:clk_div_1s|\P_div:count[14] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.821     ;
+; -11.154 ; divider:clk_div_1s|\P_div:count[12] ; divider:clk_div_1s|\P_div:count[21] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.821     ;
+; -11.150 ; divider:clk_div_1s|\P_div:count[12] ; divider:clk_div_1s|temp             ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.817     ;
+; -11.146 ; divider:clk_div_1s|\P_div:count[7]  ; divider:clk_div_1s|\P_div:count[22] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.813     ;
+; -11.145 ; divider:clk_div_1s|\P_div:count[7]  ; divider:clk_div_1s|\P_div:count[18] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.812     ;
+; -11.140 ; divider:clk_div_1s|\P_div:count[7]  ; divider:clk_div_1s|\P_div:count[20] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.807     ;
+; -11.139 ; divider:clk_div_1s|\P_div:count[7]  ; divider:clk_div_1s|\P_div:count[11] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.806     ;
+; -11.139 ; divider:clk_div_1s|\P_div:count[7]  ; divider:clk_div_1s|\P_div:count[14] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.806     ;
+; -11.139 ; divider:clk_div_1s|\P_div:count[7]  ; divider:clk_div_1s|\P_div:count[21] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.806     ;
+; -11.135 ; divider:clk_div_1s|\P_div:count[7]  ; divider:clk_div_1s|temp             ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.802     ;
+; -11.132 ; divider:clk_div_1s|\P_div:count[4]  ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.799     ;
+; -11.094 ; divider:clk_div_1s|\P_div:count[15] ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.761     ;
+; -10.992 ; divider:clk_div_1s|\P_div:count[5]  ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.659     ;
+; -10.962 ; divider:clk_div_1s|\P_div:count[3]  ; divider:clk_div_1s|\P_div:count[22] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.629     ;
+; -10.961 ; divider:clk_div_1s|\P_div:count[3]  ; divider:clk_div_1s|\P_div:count[18] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.628     ;
+; -10.958 ; divider:clk_div_1s|\P_div:count[12] ; divider:clk_div_1s|\P_div:count[12] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.625     ;
+; -10.957 ; divider:clk_div_1s|\P_div:count[12] ; divider:clk_div_1s|\P_div:count[16] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.624     ;
+; -10.956 ; divider:clk_div_1s|\P_div:count[12] ; divider:clk_div_1s|\P_div:count[19] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.623     ;
+; -10.956 ; divider:clk_div_1s|\P_div:count[3]  ; divider:clk_div_1s|\P_div:count[20] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.623     ;
+; -10.955 ; divider:clk_div_1s|\P_div:count[3]  ; divider:clk_div_1s|\P_div:count[11] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.622     ;
+; -10.955 ; divider:clk_div_1s|\P_div:count[3]  ; divider:clk_div_1s|\P_div:count[14] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.622     ;
+; -10.955 ; divider:clk_div_1s|\P_div:count[3]  ; divider:clk_div_1s|\P_div:count[21] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.622     ;
+; -10.951 ; divider:clk_div_1s|\P_div:count[3]  ; divider:clk_div_1s|temp             ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.618     ;
+; -10.943 ; divider:clk_div_1s|\P_div:count[17] ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.610     ;
+; -10.943 ; divider:clk_div_1s|\P_div:count[7]  ; divider:clk_div_1s|\P_div:count[12] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.610     ;
+; -10.942 ; divider:clk_div_1s|\P_div:count[7]  ; divider:clk_div_1s|\P_div:count[16] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.609     ;
+; -10.941 ; divider:clk_div_1s|\P_div:count[7]  ; divider:clk_div_1s|\P_div:count[19] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.608     ;
+; -10.933 ; divider:clk_div_1s|\P_div:count[8]  ; divider:clk_div_1s|\P_div:count[22] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.600     ;
+; -10.932 ; divider:clk_div_1s|\P_div:count[8]  ; divider:clk_div_1s|\P_div:count[18] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.599     ;
+; -10.927 ; divider:clk_div_1s|\P_div:count[8]  ; divider:clk_div_1s|\P_div:count[20] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.594     ;
+; -10.926 ; divider:clk_div_1s|\P_div:count[8]  ; divider:clk_div_1s|\P_div:count[11] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.593     ;
+; -10.926 ; divider:clk_div_1s|\P_div:count[8]  ; divider:clk_div_1s|\P_div:count[14] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.593     ;
+; -10.926 ; divider:clk_div_1s|\P_div:count[8]  ; divider:clk_div_1s|\P_div:count[21] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.593     ;
+; -10.922 ; divider:clk_div_1s|\P_div:count[8]  ; divider:clk_div_1s|temp             ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.589     ;
+; -10.913 ; divider:clk_div_1s|\P_div:count[16] ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.580     ;
+; -10.894 ; divider:clk_div_1s|\P_div:count[22] ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.561     ;
+; -10.884 ; divider:clk_div_1s|\P_div:count[2]  ; divider:clk_div_1s|\P_div:count[22] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.551     ;
+; -10.883 ; divider:clk_div_1s|\P_div:count[2]  ; divider:clk_div_1s|\P_div:count[18] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.550     ;
+; -10.878 ; divider:clk_div_1s|\P_div:count[2]  ; divider:clk_div_1s|\P_div:count[20] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.545     ;
+; -10.877 ; divider:clk_div_1s|\P_div:count[2]  ; divider:clk_div_1s|\P_div:count[11] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.544     ;
+; -10.877 ; divider:clk_div_1s|\P_div:count[2]  ; divider:clk_div_1s|\P_div:count[14] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.544     ;
+; -10.877 ; divider:clk_div_1s|\P_div:count[2]  ; divider:clk_div_1s|\P_div:count[21] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.544     ;
+; -10.873 ; divider:clk_div_1s|\P_div:count[2]  ; divider:clk_div_1s|temp             ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.540     ;
+; -10.869 ; divider:clk_div_1s|\P_div:count[19] ; divider:clk_div_1s|\P_div:count[22] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.536     ;
+; -10.868 ; divider:clk_div_1s|\P_div:count[19] ; divider:clk_div_1s|\P_div:count[18] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.535     ;
+; -10.863 ; divider:clk_div_1s|\P_div:count[19] ; divider:clk_div_1s|\P_div:count[20] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.530     ;
+; -10.862 ; divider:clk_div_1s|\P_div:count[19] ; divider:clk_div_1s|\P_div:count[11] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.529     ;
+; -10.862 ; divider:clk_div_1s|\P_div:count[19] ; divider:clk_div_1s|\P_div:count[14] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.529     ;
+; -10.862 ; divider:clk_div_1s|\P_div:count[19] ; divider:clk_div_1s|\P_div:count[21] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.529     ;
+; -10.858 ; divider:clk_div_1s|\P_div:count[19] ; divider:clk_div_1s|temp             ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.525     ;
+; -10.851 ; divider:clk_div_1s|\P_div:count[0]  ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.518     ;
+; -10.826 ; divider:clk_div_1s|\P_div:count[18] ; divider:clk_div_1s|\P_div:count[6]  ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.493     ;
+; -10.822 ; divider:clk_div_1s|\P_div:count[9]  ; divider:clk_div_1s|\P_div:count[22] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.489     ;
+; -10.821 ; divider:clk_div_1s|\P_div:count[9]  ; divider:clk_div_1s|\P_div:count[18] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.488     ;
+; -10.816 ; divider:clk_div_1s|\P_div:count[9]  ; divider:clk_div_1s|\P_div:count[20] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.483     ;
+; -10.815 ; divider:clk_div_1s|\P_div:count[9]  ; divider:clk_div_1s|\P_div:count[11] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.482     ;
+; -10.815 ; divider:clk_div_1s|\P_div:count[9]  ; divider:clk_div_1s|\P_div:count[14] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.482     ;
+; -10.815 ; divider:clk_div_1s|\P_div:count[9]  ; divider:clk_div_1s|\P_div:count[21] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.482     ;
+; -10.811 ; divider:clk_div_1s|\P_div:count[9]  ; divider:clk_div_1s|temp             ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.478     ;
+; -10.797 ; divider:clk_div_1s|\P_div:count[14] ; divider:clk_div_1s|\P_div:count[22] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.464     ;
+; -10.796 ; divider:clk_div_1s|\P_div:count[14] ; divider:clk_div_1s|\P_div:count[18] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.463     ;
+; -10.791 ; divider:clk_div_1s|\P_div:count[14] ; divider:clk_div_1s|\P_div:count[20] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.458     ;
+; -10.790 ; divider:clk_div_1s|\P_div:count[14] ; divider:clk_div_1s|\P_div:count[11] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.457     ;
+; -10.790 ; divider:clk_div_1s|\P_div:count[14] ; divider:clk_div_1s|\P_div:count[14] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.457     ;
+; -10.790 ; divider:clk_div_1s|\P_div:count[14] ; divider:clk_div_1s|\P_div:count[21] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.457     ;
+; -10.786 ; divider:clk_div_1s|\P_div:count[14] ; divider:clk_div_1s|temp             ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.453     ;
+; -10.780 ; divider:clk_div_1s|\P_div:count[1]  ; divider:clk_div_1s|\P_div:count[22] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.447     ;
+; -10.779 ; divider:clk_div_1s|\P_div:count[1]  ; divider:clk_div_1s|\P_div:count[18] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.446     ;
+; -10.774 ; divider:clk_div_1s|\P_div:count[1]  ; divider:clk_div_1s|\P_div:count[20] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.441     ;
+; -10.773 ; divider:clk_div_1s|\P_div:count[1]  ; divider:clk_div_1s|\P_div:count[11] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.440     ;
+; -10.773 ; divider:clk_div_1s|\P_div:count[1]  ; divider:clk_div_1s|\P_div:count[14] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.440     ;
+; -10.773 ; divider:clk_div_1s|\P_div:count[1]  ; divider:clk_div_1s|\P_div:count[21] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.440     ;
+; -10.769 ; divider:clk_div_1s|\P_div:count[1]  ; divider:clk_div_1s|temp             ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.436     ;
+; -10.759 ; divider:clk_div_1s|\P_div:count[3]  ; divider:clk_div_1s|\P_div:count[12] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.426     ;
+; -10.758 ; divider:clk_div_1s|\P_div:count[3]  ; divider:clk_div_1s|\P_div:count[16] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.425     ;
+; -10.757 ; divider:clk_div_1s|\P_div:count[3]  ; divider:clk_div_1s|\P_div:count[19] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.424     ;
+; -10.756 ; divider:clk_div_1s|\P_div:count[11] ; divider:clk_div_1s|\P_div:count[22] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.423     ;
+; -10.755 ; divider:clk_div_1s|\P_div:count[11] ; divider:clk_div_1s|\P_div:count[18] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.422     ;
+; -10.750 ; divider:clk_div_1s|\P_div:count[11] ; divider:clk_div_1s|\P_div:count[20] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.417     ;
+; -10.749 ; divider:clk_div_1s|\P_div:count[11] ; divider:clk_div_1s|\P_div:count[11] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.416     ;
+; -10.749 ; divider:clk_div_1s|\P_div:count[11] ; divider:clk_div_1s|\P_div:count[14] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.416     ;
+; -10.749 ; divider:clk_div_1s|\P_div:count[11] ; divider:clk_div_1s|\P_div:count[21] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.416     ;
+; -10.745 ; divider:clk_div_1s|\P_div:count[11] ; divider:clk_div_1s|temp             ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.412     ;
+; -10.730 ; divider:clk_div_1s|\P_div:count[8]  ; divider:clk_div_1s|\P_div:count[12] ; clk_50M      ; clk_50M     ; 1.000        ; 0.000      ; 11.397     ;
++---------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'divider:clk_div_1s|temp'                                                                                                             ;
++--------+------------------------+-------------+---------------------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node              ; To Node     ; Launch Clock              ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------+-------------+---------------------------+-------------------------+--------------+------------+------------+
+; -3.421 ; stat_prs[3]            ; stat_prs[1] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 1.000        ; 0.000      ; 4.088      ;
+; -3.417 ; stat_prs[3]            ; stat_prs[3] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 1.000        ; 0.000      ; 4.084      ;
+; -3.362 ; stat_prs[0]            ; stat_prs[0] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 1.000        ; 0.000      ; 4.029      ;
+; -3.252 ; stat_prs[1]            ; stat_prs[1] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 1.000        ; 0.000      ; 3.919      ;
+; -3.248 ; stat_prs[1]            ; stat_prs[3] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 1.000        ; 0.000      ; 3.915      ;
+; -3.204 ; stat_prs[0]            ; stat_prs[1] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 1.000        ; 0.000      ; 3.871      ;
+; -3.160 ; stat_prs[3]            ; stat_prs[0] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 1.000        ; 0.000      ; 3.827      ;
+; -3.136 ; stat_prs[1]            ; stat_prs[0] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 1.000        ; 0.000      ; 3.803      ;
+; -3.092 ; stat_prs[0]            ; stat_prs[3] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 1.000        ; 0.000      ; 3.759      ;
+; -3.067 ; debounce_v1:deb|result ; stat_prs[1] ; divider:clk_div_10ms|temp ; divider:clk_div_1s|temp ; 1.000        ; -0.143     ; 3.591      ;
+; -3.063 ; debounce_v1:deb|result ; stat_prs[3] ; divider:clk_div_10ms|temp ; divider:clk_div_1s|temp ; 1.000        ; -0.143     ; 3.587      ;
+; -2.992 ; stat_prs[3]            ; stat_prs[2] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 1.000        ; 0.000      ; 3.659      ;
+; -2.920 ; stat_prs[0]            ; stat_prs[2] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 1.000        ; 0.000      ; 3.587      ;
+; -2.823 ; stat_prs[1]            ; stat_prs[2] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 1.000        ; 0.000      ; 3.490      ;
+; -2.713 ; stat_prs[2]            ; stat_prs[1] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 1.000        ; 0.000      ; 3.380      ;
+; -2.709 ; stat_prs[2]            ; stat_prs[3] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 1.000        ; 0.000      ; 3.376      ;
+; -2.638 ; debounce_v1:deb|result ; stat_prs[2] ; divider:clk_div_10ms|temp ; divider:clk_div_1s|temp ; 1.000        ; -0.143     ; 3.162      ;
+; -2.616 ; stat_prs[2]            ; stat_prs[0] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 1.000        ; 0.000      ; 3.283      ;
+; -2.284 ; stat_prs[2]            ; stat_prs[2] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 1.000        ; 0.000      ; 2.951      ;
+; -2.246 ; debounce_v1:deb|result ; stat_prs[0] ; divider:clk_div_10ms|temp ; divider:clk_div_1s|temp ; 1.000        ; -0.143     ; 2.770      ;
++--------+------------------------+-------------+---------------------------+-------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'divider:clk_div_10ms|temp'                                                                                                                                        ;
++--------+--------------------------------+--------------------------------+---------------------------+---------------------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock              ; Latch Clock               ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+---------------------------+---------------------------+--------------+------------+------------+
+; -2.103 ; debounce_v1:deb|counter_out[0] ; debounce_v1:deb|result         ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 1.000        ; 0.000      ; 2.770      ;
+; -1.886 ; debounce_v1:deb|flipflops[0]   ; debounce_v1:deb|result         ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 1.000        ; 0.000      ; 2.553      ;
+; -1.880 ; debounce_v1:deb|flipflops[0]   ; debounce_v1:deb|counter_out[0] ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 1.000        ; 0.000      ; 2.547      ;
+; -1.811 ; debounce_v1:deb|flipflops[1]   ; debounce_v1:deb|result         ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 1.000        ; 0.000      ; 2.478      ;
+; -1.809 ; debounce_v1:deb|flipflops[1]   ; debounce_v1:deb|counter_out[0] ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 1.000        ; 0.000      ; 2.476      ;
+; -1.808 ; debounce_v1:deb|flipflops[1]   ; debounce_v1:deb|counter_out[1] ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 1.000        ; 0.000      ; 2.475      ;
+; -1.770 ; debounce_v1:deb|counter_out[1] ; debounce_v1:deb|result         ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 1.000        ; 0.000      ; 2.437      ;
+; -1.717 ; debounce_v1:deb|flipflops[0]   ; debounce_v1:deb|counter_out[1] ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 1.000        ; 0.000      ; 2.384      ;
+; -1.706 ; debounce_v1:deb|result         ; debounce_v1:deb|result         ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 1.000        ; 0.000      ; 2.373      ;
+; -1.699 ; debounce_v1:deb|counter_out[0] ; debounce_v1:deb|counter_out[0] ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 1.000        ; 0.000      ; 2.366      ;
+; -1.494 ; debounce_v1:deb|counter_out[0] ; debounce_v1:deb|counter_out[1] ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 1.000        ; 0.000      ; 2.161      ;
+; -1.259 ; debounce_v1:deb|counter_out[1] ; debounce_v1:deb|counter_out[0] ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 1.000        ; 0.000      ; 1.926      ;
+; -1.258 ; debounce_v1:deb|counter_out[1] ; debounce_v1:deb|counter_out[1] ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 1.000        ; 0.000      ; 1.925      ;
+; -1.250 ; debounce_v1:deb|flipflops[0]   ; debounce_v1:deb|flipflops[1]   ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 1.000        ; 0.000      ; 1.917      ;
++--------+--------------------------------+--------------------------------+---------------------------+---------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk_50M'                                                                                                                                                           ;
++--------+---------------------------------------+---------------------------------------+---------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                               ; Launch Clock              ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+---------------------------------------+---------------------------+-------------+--------------+------------+------------+
+; -1.617 ; divider:clk_div_1s|temp               ; divider:clk_div_1s|temp               ; divider:clk_div_1s|temp   ; clk_50M     ; 0.000        ; 3.348      ; 2.328      ;
+; -1.502 ; divider:clk_div_10ms|temp             ; divider:clk_div_10ms|temp             ; divider:clk_div_10ms|temp ; clk_50M     ; 0.000        ; 3.348      ; 2.443      ;
+; -1.117 ; divider:clk_div_1s|temp               ; divider:clk_div_1s|temp               ; divider:clk_div_1s|temp   ; clk_50M     ; -0.500       ; 3.348      ; 2.328      ;
+; -1.002 ; divider:clk_div_10ms|temp             ; divider:clk_div_10ms|temp             ; divider:clk_div_10ms|temp ; clk_50M     ; -0.500       ; 3.348      ; 2.443      ;
+; 2.837  ; divider:clk_div_10ms|\P_div:count[3]  ; divider:clk_div_10ms|\P_div:count[3]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 3.058      ;
+; 3.602  ; divider:clk_div_1s|\P_div:count[6]    ; divider:clk_div_1s|\P_div:count[6]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 3.823      ;
+; 3.650  ; divider:clk_div_10ms|\P_div:count[10] ; divider:clk_div_10ms|\P_div:count[10] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 3.871      ;
+; 3.660  ; divider:clk_div_10ms|\P_div:count[5]  ; divider:clk_div_10ms|\P_div:count[5]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 3.881      ;
+; 3.791  ; divider:clk_div_1s|\P_div:count[3]    ; divider:clk_div_1s|\P_div:count[3]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.012      ;
+; 3.814  ; divider:clk_div_10ms|\P_div:count[2]  ; divider:clk_div_10ms|\P_div:count[2]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.035      ;
+; 3.885  ; divider:clk_div_1s|\P_div:count[4]    ; divider:clk_div_1s|\P_div:count[4]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.106      ;
+; 3.886  ; divider:clk_div_1s|\P_div:count[5]    ; divider:clk_div_1s|\P_div:count[5]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.107      ;
+; 3.890  ; divider:clk_div_10ms|\P_div:count[13] ; divider:clk_div_10ms|\P_div:count[13] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.111      ;
+; 3.914  ; divider:clk_div_1s|\P_div:count[2]    ; divider:clk_div_1s|\P_div:count[2]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.135      ;
+; 3.936  ; divider:clk_div_10ms|\P_div:count[9]  ; divider:clk_div_10ms|\P_div:count[9]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.157      ;
+; 3.937  ; divider:clk_div_10ms|\P_div:count[6]  ; divider:clk_div_10ms|\P_div:count[6]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.158      ;
+; 4.036  ; divider:clk_div_10ms|\P_div:count[11] ; divider:clk_div_10ms|\P_div:count[11] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.257      ;
+; 4.039  ; divider:clk_div_1s|\P_div:count[1]    ; divider:clk_div_1s|\P_div:count[1]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.260      ;
+; 4.190  ; divider:clk_div_10ms|\P_div:count[8]  ; divider:clk_div_10ms|\P_div:count[8]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.411      ;
+; 4.229  ; divider:clk_div_10ms|\P_div:count[2]  ; divider:clk_div_10ms|\P_div:count[3]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.450      ;
+; 4.324  ; divider:clk_div_1s|\P_div:count[0]    ; divider:clk_div_1s|\P_div:count[1]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.545      ;
+; 4.327  ; divider:clk_div_1s|\P_div:count[0]    ; divider:clk_div_1s|\P_div:count[0]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.548      ;
+; 4.454  ; divider:clk_div_1s|\P_div:count[2]    ; divider:clk_div_1s|\P_div:count[3]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.675      ;
+; 4.461  ; divider:clk_div_10ms|\P_div:count[9]  ; divider:clk_div_10ms|\P_div:count[10] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.682      ;
+; 4.466  ; divider:clk_div_10ms|\P_div:count[3]  ; divider:clk_div_10ms|\P_div:count[5]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.687      ;
+; 4.514  ; divider:clk_div_1s|\P_div:count[0]    ; divider:clk_div_1s|\P_div:count[3]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.735      ;
+; 4.538  ; divider:clk_div_10ms|\P_div:count[7]  ; divider:clk_div_10ms|\P_div:count[7]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.759      ;
+; 4.702  ; divider:clk_div_10ms|\P_div:count[10] ; divider:clk_div_10ms|\P_div:count[11] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.923      ;
+; 4.710  ; divider:clk_div_1s|\P_div:count[4]    ; divider:clk_div_1s|\P_div:count[5]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.931      ;
+; 4.746  ; divider:clk_div_1s|\P_div:count[0]    ; divider:clk_div_1s|\P_div:count[4]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.967      ;
+; 4.749  ; divider:clk_div_10ms|\P_div:count[3]  ; divider:clk_div_10ms|\P_div:count[6]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.970      ;
+; 4.750  ; divider:clk_div_10ms|\P_div:count[5]  ; divider:clk_div_10ms|\P_div:count[6]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.971      ;
+; 4.754  ; divider:clk_div_1s|\P_div:count[8]    ; divider:clk_div_1s|\P_div:count[8]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.975      ;
+; 4.757  ; divider:clk_div_1s|\P_div:count[5]    ; divider:clk_div_1s|\P_div:count[6]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.978      ;
+; 4.764  ; divider:clk_div_1s|\P_div:count[0]    ; divider:clk_div_1s|\P_div:count[5]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 4.985      ;
+; 4.781  ; divider:clk_div_1s|\P_div:count[0]    ; divider:clk_div_1s|\P_div:count[2]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.002      ;
+; 4.797  ; divider:clk_div_1s|\P_div:count[2]    ; divider:clk_div_1s|\P_div:count[4]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.018      ;
+; 4.799  ; divider:clk_div_1s|\P_div:count[10]   ; divider:clk_div_1s|\P_div:count[10]   ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.020      ;
+; 4.817  ; divider:clk_div_10ms|\P_div:count[9]  ; divider:clk_div_10ms|\P_div:count[11] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.038      ;
+; 4.828  ; divider:clk_div_1s|\P_div:count[0]    ; divider:clk_div_1s|\P_div:count[6]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.049      ;
+; 4.862  ; divider:clk_div_1s|\P_div:count[1]    ; divider:clk_div_10ms|\P_div:count[3]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.083      ;
+; 4.883  ; divider:clk_div_1s|\P_div:count[17]   ; divider:clk_div_1s|\P_div:count[17]   ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.104      ;
+; 4.885  ; divider:clk_div_1s|\P_div:count[4]    ; divider:clk_div_1s|\P_div:count[6]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.106      ;
+; 4.886  ; divider:clk_div_1s|\P_div:count[3]    ; divider:clk_div_1s|\P_div:count[4]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.107      ;
+; 4.917  ; divider:clk_div_10ms|\P_div:count[10] ; divider:clk_div_10ms|\P_div:count[13] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.138      ;
+; 4.926  ; divider:clk_div_1s|\P_div:count[2]    ; divider:clk_div_1s|\P_div:count[5]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.147      ;
+; 4.944  ; divider:clk_div_1s|\P_div:count[1]    ; divider:clk_div_1s|\P_div:count[3]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.165      ;
+; 4.985  ; divider:clk_div_1s|\P_div:count[0]    ; divider:clk_div_10ms|\P_div:count[3]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.206      ;
+; 5.003  ; divider:clk_div_10ms|\P_div:count[11] ; divider:clk_div_10ms|\P_div:count[13] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.224      ;
+; 5.015  ; divider:clk_div_1s|\P_div:count[3]    ; divider:clk_div_1s|\P_div:count[5]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.236      ;
+; 5.021  ; divider:clk_div_10ms|\P_div:count[3]  ; divider:clk_div_10ms|\P_div:count[8]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.242      ;
+; 5.032  ; divider:clk_div_10ms|\P_div:count[9]  ; divider:clk_div_10ms|\P_div:count[13] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.253      ;
+; 5.053  ; divider:clk_div_10ms|\P_div:count[3]  ; divider:clk_div_10ms|\P_div:count[10] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.274      ;
+; 5.092  ; divider:clk_div_10ms|\P_div:count[2]  ; divider:clk_div_10ms|\P_div:count[5]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.313      ;
+; 5.100  ; divider:clk_div_1s|\P_div:count[7]    ; divider:clk_div_1s|\P_div:count[7]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.321      ;
+; 5.101  ; divider:clk_div_1s|\P_div:count[2]    ; divider:clk_div_1s|\P_div:count[6]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.322      ;
+; 5.127  ; divider:clk_div_10ms|\P_div:count[6]  ; divider:clk_div_10ms|\P_div:count[8]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.348      ;
+; 5.176  ; divider:clk_div_1s|\P_div:count[1]    ; divider:clk_div_1s|\P_div:count[4]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.397      ;
+; 5.177  ; divider:clk_div_10ms|\P_div:count[4]  ; divider:clk_div_10ms|\P_div:count[5]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.398      ;
+; 5.190  ; divider:clk_div_1s|\P_div:count[3]    ; divider:clk_div_1s|\P_div:count[6]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.411      ;
+; 5.194  ; divider:clk_div_1s|\P_div:count[1]    ; divider:clk_div_1s|\P_div:count[5]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.415      ;
+; 5.199  ; divider:clk_div_1s|\P_div:count[1]    ; divider:clk_div_10ms|\P_div:count[2]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.420      ;
+; 5.207  ; divider:clk_div_10ms|\P_div:count[8]  ; divider:clk_div_10ms|\P_div:count[10] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.428      ;
+; 5.208  ; divider:clk_div_10ms|\P_div:count[7]  ; divider:clk_div_10ms|\P_div:count[8]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.429      ;
+; 5.209  ; divider:clk_div_10ms|\P_div:count[6]  ; divider:clk_div_10ms|\P_div:count[7]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.430      ;
+; 5.211  ; divider:clk_div_1s|\P_div:count[1]    ; divider:clk_div_1s|\P_div:count[2]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.432      ;
+; 5.214  ; divider:clk_div_10ms|\P_div:count[3]  ; divider:clk_div_10ms|\P_div:count[7]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.435      ;
+; 5.244  ; divider:clk_div_10ms|\P_div:count[5]  ; divider:clk_div_10ms|\P_div:count[8]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.465      ;
+; 5.248  ; divider:clk_div_1s|\P_div:count[24]   ; divider:clk_div_1s|\P_div:count[24]   ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.469      ;
+; 5.258  ; divider:clk_div_1s|\P_div:count[1]    ; divider:clk_div_1s|\P_div:count[6]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.479      ;
+; 5.291  ; divider:clk_div_10ms|\P_div:count[3]  ; divider:clk_div_10ms|\P_div:count[13] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.512      ;
+; 5.298  ; divider:clk_div_10ms|\P_div:count[3]  ; divider:clk_div_10ms|\P_div:count[11] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.519      ;
+; 5.322  ; divider:clk_div_1s|\P_div:count[0]    ; divider:clk_div_10ms|\P_div:count[2]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.543      ;
+; 5.326  ; divider:clk_div_1s|\P_div:count[23]   ; divider:clk_div_1s|\P_div:count[23]   ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.547      ;
+; 5.326  ; divider:clk_div_10ms|\P_div:count[5]  ; divider:clk_div_10ms|\P_div:count[7]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.547      ;
+; 5.335  ; divider:clk_div_10ms|\P_div:count[3]  ; divider:clk_div_10ms|\P_div:count[9]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.556      ;
+; 5.355  ; divider:clk_div_10ms|\P_div:count[15] ; divider:clk_div_10ms|\P_div:count[15] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.576      ;
+; 5.368  ; divider:clk_div_10ms|\P_div:count[6]  ; divider:clk_div_10ms|\P_div:count[10] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.589      ;
+; 5.375  ; divider:clk_div_10ms|\P_div:count[2]  ; divider:clk_div_10ms|\P_div:count[6]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.596      ;
+; 5.423  ; divider:clk_div_1s|\P_div:count[12]   ; divider:clk_div_1s|\P_div:count[12]   ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.644      ;
+; 5.432  ; divider:clk_div_1s|\P_div:count[6]    ; divider:clk_div_1s|\P_div:count[8]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.653      ;
+; 5.445  ; divider:clk_div_10ms|\P_div:count[8]  ; divider:clk_div_10ms|\P_div:count[13] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.666      ;
+; 5.449  ; divider:clk_div_10ms|\P_div:count[12] ; divider:clk_div_10ms|\P_div:count[13] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.670      ;
+; 5.449  ; divider:clk_div_10ms|\P_div:count[7]  ; divider:clk_div_10ms|\P_div:count[10] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.670      ;
+; 5.452  ; divider:clk_div_10ms|\P_div:count[8]  ; divider:clk_div_10ms|\P_div:count[11] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.673      ;
+; 5.469  ; divider:clk_div_1s|\P_div:count[6]    ; divider:clk_div_1s|\P_div:count[10]   ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.690      ;
+; 5.485  ; divider:clk_div_10ms|\P_div:count[14] ; divider:clk_div_10ms|\P_div:count[14] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.706      ;
+; 5.485  ; divider:clk_div_10ms|\P_div:count[5]  ; divider:clk_div_10ms|\P_div:count[10] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.706      ;
+; 5.489  ; divider:clk_div_10ms|\P_div:count[8]  ; divider:clk_div_10ms|\P_div:count[9]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.710      ;
+; 5.491  ; divider:clk_div_10ms|\P_div:count[12] ; divider:clk_div_10ms|\P_div:count[12] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.712      ;
+; 5.571  ; divider:clk_div_10ms|\P_div:count[4]  ; divider:clk_div_10ms|\P_div:count[6]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.792      ;
+; 5.582  ; divider:clk_div_10ms|\P_div:count[17] ; divider:clk_div_10ms|\P_div:count[7]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.803      ;
+; 5.595  ; divider:clk_div_1s|\P_div:count[9]    ; divider:clk_div_1s|\P_div:count[9]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.816      ;
+; 5.606  ; divider:clk_div_10ms|\P_div:count[6]  ; divider:clk_div_10ms|\P_div:count[13] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.827      ;
+; 5.610  ; divider:clk_div_1s|\P_div:count[9]    ; divider:clk_div_1s|\P_div:count[10]   ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.831      ;
+; 5.613  ; divider:clk_div_10ms|\P_div:count[6]  ; divider:clk_div_10ms|\P_div:count[11] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.834      ;
+; 5.647  ; divider:clk_div_10ms|\P_div:count[2]  ; divider:clk_div_10ms|\P_div:count[8]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.868      ;
+; 5.650  ; divider:clk_div_10ms|\P_div:count[6]  ; divider:clk_div_10ms|\P_div:count[9]  ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.871      ;
+; 5.651  ; divider:clk_div_1s|\P_div:count[7]    ; divider:clk_div_1s|\P_div:count[8]    ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.872      ;
+; 5.655  ; divider:clk_div_10ms|\P_div:count[10] ; divider:clk_div_10ms|\P_div:count[12] ; clk_50M                   ; clk_50M     ; 0.000        ; 0.000      ; 5.876      ;
++--------+---------------------------------------+---------------------------------------+---------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'divider:clk_div_10ms|temp'                                                                                                                                        ;
++-------+--------------------------------+--------------------------------+---------------------------+---------------------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock              ; Latch Clock               ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+---------------------------+---------------------------+--------------+------------+------------+
+; 1.696 ; debounce_v1:deb|flipflops[0]   ; debounce_v1:deb|flipflops[1]   ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 0.000        ; 0.000      ; 1.917      ;
+; 1.704 ; debounce_v1:deb|counter_out[1] ; debounce_v1:deb|counter_out[1] ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 0.000        ; 0.000      ; 1.925      ;
+; 1.705 ; debounce_v1:deb|counter_out[1] ; debounce_v1:deb|counter_out[0] ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 0.000        ; 0.000      ; 1.926      ;
+; 1.940 ; debounce_v1:deb|counter_out[0] ; debounce_v1:deb|counter_out[1] ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 0.000        ; 0.000      ; 2.161      ;
+; 2.145 ; debounce_v1:deb|counter_out[0] ; debounce_v1:deb|counter_out[0] ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 0.000        ; 0.000      ; 2.366      ;
+; 2.152 ; debounce_v1:deb|result         ; debounce_v1:deb|result         ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 0.000        ; 0.000      ; 2.373      ;
+; 2.163 ; debounce_v1:deb|flipflops[0]   ; debounce_v1:deb|counter_out[1] ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 0.000        ; 0.000      ; 2.384      ;
+; 2.216 ; debounce_v1:deb|counter_out[1] ; debounce_v1:deb|result         ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 0.000        ; 0.000      ; 2.437      ;
+; 2.254 ; debounce_v1:deb|flipflops[1]   ; debounce_v1:deb|counter_out[1] ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 0.000        ; 0.000      ; 2.475      ;
+; 2.255 ; debounce_v1:deb|flipflops[1]   ; debounce_v1:deb|counter_out[0] ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 0.000        ; 0.000      ; 2.476      ;
+; 2.257 ; debounce_v1:deb|flipflops[1]   ; debounce_v1:deb|result         ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 0.000        ; 0.000      ; 2.478      ;
+; 2.326 ; debounce_v1:deb|flipflops[0]   ; debounce_v1:deb|counter_out[0] ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 0.000        ; 0.000      ; 2.547      ;
+; 2.332 ; debounce_v1:deb|flipflops[0]   ; debounce_v1:deb|result         ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 0.000        ; 0.000      ; 2.553      ;
+; 2.549 ; debounce_v1:deb|counter_out[0] ; debounce_v1:deb|result         ; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 0.000        ; 0.000      ; 2.770      ;
++-------+--------------------------------+--------------------------------+---------------------------+---------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'divider:clk_div_1s|temp'                                                                                                             ;
++-------+------------------------+-------------+---------------------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node              ; To Node     ; Launch Clock              ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------+-------------+---------------------------+-------------------------+--------------+------------+------------+
+; 2.187 ; stat_prs[2]            ; stat_prs[2] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 0.000        ; 0.000      ; 2.408      ;
+; 2.192 ; stat_prs[2]            ; stat_prs[3] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 0.000        ; 0.000      ; 2.413      ;
+; 2.333 ; stat_prs[0]            ; stat_prs[0] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 0.000        ; 0.000      ; 2.554      ;
+; 2.349 ; stat_prs[0]            ; stat_prs[1] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 0.000        ; 0.000      ; 2.570      ;
+; 2.530 ; stat_prs[1]            ; stat_prs[1] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 0.000        ; 0.000      ; 2.751      ;
+; 2.665 ; stat_prs[3]            ; stat_prs[3] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 0.000        ; 0.000      ; 2.886      ;
+; 2.670 ; stat_prs[3]            ; stat_prs[2] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 0.000        ; 0.000      ; 2.891      ;
+; 2.692 ; debounce_v1:deb|result ; stat_prs[0] ; divider:clk_div_10ms|temp ; divider:clk_div_1s|temp ; 0.000        ; -0.143     ; 2.770      ;
+; 2.898 ; stat_prs[2]            ; stat_prs[0] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 0.000        ; 0.000      ; 3.119      ;
+; 2.904 ; stat_prs[2]            ; stat_prs[1] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 0.000        ; 0.000      ; 3.125      ;
+; 2.962 ; stat_prs[1]            ; stat_prs[2] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 0.000        ; 0.000      ; 3.183      ;
+; 2.966 ; stat_prs[1]            ; stat_prs[3] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 0.000        ; 0.000      ; 3.187      ;
+; 3.084 ; debounce_v1:deb|result ; stat_prs[2] ; divider:clk_div_10ms|temp ; divider:clk_div_1s|temp ; 0.000        ; -0.143     ; 3.162      ;
+; 3.113 ; stat_prs[0]            ; stat_prs[2] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 0.000        ; 0.000      ; 3.334      ;
+; 3.269 ; stat_prs[3]            ; stat_prs[1] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 0.000        ; 0.000      ; 3.490      ;
+; 3.370 ; stat_prs[0]            ; stat_prs[3] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 0.000        ; 0.000      ; 3.591      ;
+; 3.427 ; stat_prs[3]            ; stat_prs[0] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 0.000        ; 0.000      ; 3.648      ;
+; 3.437 ; stat_prs[1]            ; stat_prs[0] ; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp ; 0.000        ; 0.000      ; 3.658      ;
+; 3.509 ; debounce_v1:deb|result ; stat_prs[3] ; divider:clk_div_10ms|temp ; divider:clk_div_1s|temp ; 0.000        ; -0.143     ; 3.587      ;
+; 3.513 ; debounce_v1:deb|result ; stat_prs[1] ; divider:clk_div_10ms|temp ; divider:clk_div_1s|temp ; 0.000        ; -0.143     ; 3.591      ;
++-------+------------------------+-------------+---------------------------+-------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                   ;
++---------------------------+---------------------------+----------+----------+----------+----------+
+; From Clock                ; To Clock                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------------+---------------------------+----------+----------+----------+----------+
+; clk_50M                   ; clk_50M                   ; 10403    ; 0        ; 0        ; 0        ;
+; divider:clk_div_1s|temp   ; clk_50M                   ; 1        ; 1        ; 0        ; 0        ;
+; divider:clk_div_10ms|temp ; clk_50M                   ; 1        ; 1        ; 0        ; 0        ;
+; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp   ; 35       ; 0        ; 0        ; 0        ;
+; divider:clk_div_10ms|temp ; divider:clk_div_1s|temp   ; 4        ; 0        ; 0        ; 0        ;
+; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 14       ; 0        ; 0        ; 0        ;
++---------------------------+---------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                    ;
++---------------------------+---------------------------+----------+----------+----------+----------+
+; From Clock                ; To Clock                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------------+---------------------------+----------+----------+----------+----------+
+; clk_50M                   ; clk_50M                   ; 10403    ; 0        ; 0        ; 0        ;
+; divider:clk_div_1s|temp   ; clk_50M                   ; 1        ; 1        ; 0        ; 0        ;
+; divider:clk_div_10ms|temp ; clk_50M                   ; 1        ; 1        ; 0        ; 0        ;
+; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp   ; 35       ; 0        ; 0        ; 0        ;
+; divider:clk_div_10ms|temp ; divider:clk_div_1s|temp   ; 4        ; 0        ; 0        ; 0        ;
+; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; 14       ; 0        ; 0        ; 0        ;
++---------------------------+---------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 5     ; 5    ;
+; Unconstrained Output Ports      ; 11    ; 11   ;
+; Unconstrained Output Port Paths ; 44    ; 44   ;
++---------------------------------+-------+------+
+
+
++----------------------------------------------------------------------------+
+; Clock Status Summary                                                       ;
++---------------------------+---------------------------+------+-------------+
+; Target                    ; Clock                     ; Type ; Status      ;
++---------------------------+---------------------------+------+-------------+
+; clk_50M                   ; clk_50M                   ; Base ; Constrained ;
+; divider:clk_div_1s|temp   ; divider:clk_div_1s|temp   ; Base ; Constrained ;
+; divider:clk_div_10ms|temp ; divider:clk_div_10ms|temp ; Base ; Constrained ;
++---------------------------+---------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; rst_in     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seq_in     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                             ;
++----------------+---------------------------------------------------------------------------------------+
+; Output Port    ; Comment                                                                               ;
++----------------+---------------------------------------------------------------------------------------+
+; est_display[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est_display[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est_display[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est_display[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est_display[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est_display[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est_display[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; res_display[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; res_display[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; res_display[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; res_display[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++----------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; rst_in     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seq_in     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                             ;
++----------------+---------------------------------------------------------------------------------------+
+; Output Port    ; Comment                                                                               ;
++----------------+---------------------------------------------------------------------------------------+
+; est_display[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est_display[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est_display[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est_display[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est_display[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est_display[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est_display[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; res_display[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; res_display[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; res_display[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; res_display[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++----------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Fri Jun 28 21:41:15 2024
+Info: Command: quartus_sta detector -c detector
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'detector.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name divider:clk_div_1s|temp divider:clk_div_1s|temp
+    Info (332105): create_clock -period 1.000 -name divider:clk_div_10ms|temp divider:clk_div_10ms|temp
+    Info (332105): create_clock -period 1.000 -name clk_50M clk_50M
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -11.649
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -11.649            -348.717 clk_50M 
+    Info (332119):    -3.421             -13.192 divider:clk_div_1s|temp 
+    Info (332119):    -2.103              -7.041 divider:clk_div_10ms|temp 
+Info (332146): Worst-case hold slack is -1.617
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.617              -3.119 clk_50M 
+    Info (332119):     1.696               0.000 divider:clk_div_10ms|temp 
+    Info (332119):     2.187               0.000 divider:clk_div_1s|temp 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 clk_50M 
+    Info (332119):     0.234               0.000 divider:clk_div_10ms|temp 
+    Info (332119):     0.234               0.000 divider:clk_div_1s|temp 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4658 megabytes
+    Info: Processing ended: Fri Jun 28 21:41:17 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

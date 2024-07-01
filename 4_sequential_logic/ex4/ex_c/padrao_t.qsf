@@ -1,0 +1,61 @@
+# Ajustar o nome da Top level entity (nome do arquivo vhdl) de acordo com o projeto:
+set_global_assignment -name TOP_LEVEL_ENTITY ff_t_deb
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+# set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED WITH WEAK PULL-UP"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS OUTPUT DRIVING GROUND"
+#======================================================
+# Cristal e led do kit:
+# Clock de 50 MHz - descomentar se utilizado:
+set_location_assignment PIN_12 -to clk_50m
+# led do kit - descomentar se usado:
+# set_location_assignment PIN_77 -to led
+#======================================================
+# Conexões para cabo flat em conector P2 do kit:
+# Botões - todas com pull-up conectado e schmitt trigger input: 
+set_location_assignment PIN_50 -to clrn
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to clrn
+set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to clrn
+set_location_assignment PIN_52 -to t
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to t
+set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to t
+set_location_assignment PIN_51 -to clk_button
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to clk_button
+set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to clk_button
+set_location_assignment PIN_53 -to prn
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to prn
+set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to prn
+#=======================================================
+# Displays:
+# Segmentos do disp2:
+set_location_assignment PIN_30 -to a2
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to a2
+set_location_assignment PIN_34 -to b2
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to b2
+set_location_assignment PIN_36 -to c2
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to c2
+set_location_assignment PIN_38 -to d2
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to d2
+set_location_assignment PIN_40 -to e2
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to e2
+set_location_assignment PIN_42 -to f2
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to f2
+set_location_assignment PIN_44 -to g2
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to g2
+set_location_assignment PIN_48 -to qn
+#=========================================================
+# Segmentos do disp1:
+set_location_assignment PIN_33 -to a1
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to a1
+set_location_assignment PIN_35 -to b1
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to b1
+set_location_assignment PIN_37 -to c1
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to c1
+set_location_assignment PIN_39 -to d1
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to d1
+set_location_assignment PIN_41 -to e1
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to e1
+set_location_assignment PIN_43 -to f1
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to f1
+set_location_assignment PIN_47 -to g1
+set_instance_assignment -name RESERVE_PIN AS_OUTPUT_DRIVING_GROUND -to g1
+set_location_assignment PIN_49 -to q

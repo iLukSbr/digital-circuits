@@ -1,0 +1,11 @@
+Fitter Status : Successful - Fri Apr 26 21:14:23 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : latch_d_nand
+Top-level Entity Name : latch_d_nand
+Family : MAX II
+Device : EPM240T100C5
+Timing Models : Final
+Total logic elements : 2 / 240 ( < 1 % )
+Total pins : 18 / 80 ( 23 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

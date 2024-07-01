@@ -1,0 +1,11 @@
+Fitter Status : Successful - Thu Jun 13 17:55:26 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : sequencia
+Top-level Entity Name : sequencia
+Family : MAX II
+Device : EPM240T100C3
+Timing Models : Final
+Total logic elements : 82 / 240 ( 34 % )
+Total pins : 18 / 80 ( 23 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

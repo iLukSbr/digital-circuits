@@ -1,0 +1,4 @@
+Comparando o Flip-Flop D com resposta ao flanco positivo
+nas versões comum e mestre-escravo,
+observa-se que na versão comum, são utilizadas apenas 6 portas lógicas,
+enquanto o mestre-escravo otimizado utiliza 8.

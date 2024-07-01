@@ -1,0 +1,174 @@
+// Copyright (C) 2023  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition"
+
+// DATE "04/26/2024 21:14:33"
+
+// 
+// Device: Altera EPM240T100C5 Package TQFP100
+// 
+
+// 
+// This Verilog file should be used for Questa Intel FPGA (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module latch_d_nand (
+	enable,
+	din,
+	q,
+	qn);
+input 	enable;
+input 	din;
+output 	q;
+output 	qn;
+
+// Design Ports Information
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \din~combout ;
+wire \enable~combout ;
+wire \q$latch~combout ;
+wire \qn$latch~combout ;
+
+
+// Location: PIN_50,	 I/O Standard: 3.3V Schmitt Trigger Input,	 Current Strength: Default
+maxii_io \din~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\din~combout ),
+	.padio(din));
+// synopsys translate_off
+defparam \din~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_53,	 I/O Standard: 3.3V Schmitt Trigger Input,	 Current Strength: Default
+maxii_io \enable~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\enable~combout ),
+	.padio(enable));
+// synopsys translate_off
+defparam \enable~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X7_Y1_N9
+maxii_lcell q$latch(
+// Equation(s):
+// \q$latch~combout  = ((GLOBAL(\enable~combout ) & (\din~combout )) # (!GLOBAL(\enable~combout ) & ((\q$latch~combout ))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\din~combout ),
+	.datac(\enable~combout ),
+	.datad(\q$latch~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\q$latch~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam q$latch.lut_mask = "cfc0";
+defparam q$latch.operation_mode = "normal";
+defparam q$latch.output_mode = "comb_only";
+defparam q$latch.register_cascade_mode = "off";
+defparam q$latch.sum_lutc_input = "datac";
+defparam q$latch.synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N2
+maxii_lcell qn$latch(
+// Equation(s):
+// \qn$latch~combout  = ((GLOBAL(\enable~combout ) & (!\din~combout )) # (!GLOBAL(\enable~combout ) & ((\qn$latch~combout ))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\din~combout ),
+	.datac(\enable~combout ),
+	.datad(\qn$latch~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\qn$latch~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam qn$latch.lut_mask = "3f30";
+defparam qn$latch.operation_mode = "normal";
+defparam qn$latch.output_mode = "comb_only";
+defparam qn$latch.register_cascade_mode = "off";
+defparam qn$latch.sum_lutc_input = "datac";
+defparam qn$latch.synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_49,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \q~I (
+	.datain(\q$latch~combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(q));
+// synopsys translate_off
+defparam \q~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_48,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \qn~I (
+	.datain(\qn$latch~combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(qn));
+// synopsys translate_off
+defparam \qn~I .operation_mode = "output";
+// synopsys translate_on
+
+endmodule

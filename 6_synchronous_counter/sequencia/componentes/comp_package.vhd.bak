@@ -1,0 +1,24 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+package comp_package is
+
+    component basic_divider is
+        generic(divisor: integer := 5);
+        port(
+          clk_in		: in  std_logic;	-- clock in.
+          clk_out		: out std_logic		-- clock in dividido 2 x divisor
+          );
+      end component;
+	
+	component debounce is
+		generic(counter_size : INTEGER := 1); -- generaliza capacidade do contador
+		port(
+			clk : in STD_LOGIC; -- entrada relogio
+			button : in STD_LOGIC; -- input signal
+			result : out STD_LOGIC -- debounced signal
+		);
+	end component;
+	
+end comp_package;

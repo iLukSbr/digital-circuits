@@ -1,0 +1,15 @@
+|p2ex1
+x => nor_out.IN0
+x => nand_out.IN0
+x => nn_and_out.IN0
+x => nn_or_out.IN0
+y => nor_out.IN1
+y => nand_out.IN1
+y => nn_and_out.IN1
+y => nn_or_out.IN1
+nor_out << nor_out.DB_MAX_OUTPUT_PORT_TYPE
+nand_out << nand_out.DB_MAX_OUTPUT_PORT_TYPE
+nn_and_out << nn_and_out.DB_MAX_OUTPUT_PORT_TYPE
+nn_or_out << nn_or_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

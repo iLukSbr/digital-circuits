@@ -1,0 +1,11 @@
+Fitter Status : Successful - Fri Mar 22 21:23:26 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : p2ex1
+Top-level Entity Name : p2ex1
+Family : MAX II
+Device : EPM240T100C5
+Timing Models : Final
+Total logic elements : 2 / 240 ( < 1 % )
+Total pins : 22 / 80 ( 28 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

@@ -1,0 +1,138 @@
+// Copyright (C) 2023  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition"
+
+// DATE "03/22/2024 21:16:45"
+
+// 
+// Device: Altera EPM240T100C5 Package TQFP100
+// 
+
+// 
+// This Verilog file should be used for Questa Intel FPGA (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module cinto_automotivo (
+	motorista_presente,
+	cinto_em_uso,
+	ignicao_ligada,
+	alarme);
+input 	motorista_presente;
+input 	cinto_em_uso;
+input 	ignicao_ligada;
+output 	alarme;
+
+// Design Ports Information
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \motorista_presente~combout ;
+wire \cinto_em_uso~combout ;
+wire \ignicao_ligada~combout ;
+wire \alarme~0_combout ;
+
+
+// Location: PIN_30,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \motorista_presente~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\motorista_presente~combout ),
+	.padio(motorista_presente));
+// synopsys translate_off
+defparam \motorista_presente~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_34,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \cinto_em_uso~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\cinto_em_uso~combout ),
+	.padio(cinto_em_uso));
+// synopsys translate_off
+defparam \cinto_em_uso~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_36,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \ignicao_ligada~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\ignicao_ligada~combout ),
+	.padio(ignicao_ligada));
+// synopsys translate_off
+defparam \ignicao_ligada~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N2
+maxii_lcell \alarme~0 (
+// Equation(s):
+// \alarme~0_combout  = (\motorista_presente~combout  & (((!\cinto_em_uso~combout  & \ignicao_ligada~combout ))))
+
+	.clk(gnd),
+	.dataa(\motorista_presente~combout ),
+	.datab(vcc),
+	.datac(\cinto_em_uso~combout ),
+	.datad(\ignicao_ligada~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\alarme~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \alarme~0 .lut_mask = "0a00";
+defparam \alarme~0 .operation_mode = "normal";
+defparam \alarme~0 .output_mode = "comb_only";
+defparam \alarme~0 .register_cascade_mode = "off";
+defparam \alarme~0 .sum_lutc_input = "datac";
+defparam \alarme~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_75,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \alarme~I (
+	.datain(\alarme~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(alarme));
+// synopsys translate_off
+defparam \alarme~I .operation_mode = "output";
+// synopsys translate_on
+
+endmodule

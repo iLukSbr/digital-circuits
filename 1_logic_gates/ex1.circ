@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="3.8.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Pin">
+      <a name="appearance" val="classic"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#TTL" name="6"/>
+  <lib desc="#TCL" name="7"/>
+  <lib desc="#Base" name="8"/>
+  <lib desc="#BFH-Praktika" name="9"/>
+  <lib desc="#Input/Output-Extra" name="10"/>
+  <lib desc="#Soc" name="11"/>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="8" map="Button2" name="Poke Tool"/>
+    <tool lib="8" map="Button3" name="Menu Tool"/>
+    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="8" name="Poke Tool"/>
+    <tool lib="8" name="Edit Tool"/>
+    <tool lib="8" name="Wiring Tool"/>
+    <tool lib="8" name="Text Tool"/>
+    <sep/>
+    <tool lib="0" name="Pin"/>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <sep/>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+    <tool lib="1" name="XOR Gate"/>
+    <tool lib="1" name="NAND Gate"/>
+    <tool lib="1" name="NOR Gate"/>
+    <sep/>
+    <tool lib="4" name="D Flip-Flop"/>
+    <tool lib="4" name="Register"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="main"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(130,660)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="X_XNOR"/>
+    </comp>
+    <comp lib="0" loc="(130,700)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Y_XNOR"/>
+    </comp>
+    <comp lib="0" loc="(140,120)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Y_AND"/>
+    </comp>
+    <comp lib="0" loc="(140,270)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="X_NOT"/>
+    </comp>
+    <comp lib="0" loc="(140,450)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="X_NOR"/>
+    </comp>
+    <comp lib="0" loc="(140,490)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Y_NOR"/>
+    </comp>
+    <comp lib="0" loc="(140,80)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="X_AND"/>
+    </comp>
+    <comp lib="0" loc="(170,950)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="X"/>
+    </comp>
+    <comp lib="0" loc="(170,970)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Y"/>
+    </comp>
+    <comp lib="0" loc="(310,680)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z_XNOR"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(320,100)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z_AND"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(320,270)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z_NOT"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(320,470)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z_NOR"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(380,760)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z_XNOR_VHDL"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(390,1010)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(390,1030)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(390,1050)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(390,1070)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(390,1090)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(390,150)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z_AND_VHDL"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(390,520)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z_NOR_VHDL"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(390,950)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(390,970)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(390,990)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(400,310)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z_NOT_VHDL"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(660,120)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Y_OR"/>
+    </comp>
+    <comp lib="0" loc="(660,80)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="X_OR"/>
+    </comp>
+    <comp lib="0" loc="(680,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="X_NAND"/>
+    </comp>
+    <comp lib="0" loc="(680,290)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Y_NAND"/>
+    </comp>
+    <comp lib="0" loc="(680,450)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="X_XOR"/>
+    </comp>
+    <comp lib="0" loc="(680,490)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Y_XOR"/>
+    </comp>
+    <comp lib="0" loc="(840,100)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z_OR"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(860,270)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z_NAND"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(860,470)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z_XOR"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(920,150)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z_OR_VHDL"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(920,320)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z_NAND_VHDL"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(920,520)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z_XOR_VHDL"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(230,270)" name="NOT Gate"/>
+    <comp lib="1" loc="(250,100)" name="AND Gate"/>
+    <comp lib="1" loc="(260,470)" name="NOR Gate"/>
+    <comp lib="1" loc="(260,680)" name="XNOR Gate"/>
+    <comp lib="1" loc="(770,100)" name="OR Gate"/>
+    <comp lib="1" loc="(800,270)" name="NAND Gate"/>
+    <comp lib="1" loc="(800,470)" name="XOR Gate"/>
+    <comp lib="8" loc="(145,635)" name="Text">
+      <a name="text" val="XNOR"/>
+    </comp>
+    <comp lib="8" loc="(175,430)" name="Text">
+      <a name="text" val="NOR"/>
+    </comp>
+    <comp lib="8" loc="(190,240)" name="Text">
+      <a name="text" val="NOT"/>
+    </comp>
+    <comp lib="8" loc="(215,60)" name="Text">
+      <a name="text" val="AND"/>
+    </comp>
+    <comp lib="8" loc="(710,425)" name="Text">
+      <a name="text" val="XOR"/>
+    </comp>
+    <comp lib="8" loc="(715,220)" name="Text">
+      <a name="text" val="NAND"/>
+    </comp>
+    <comp lib="8" loc="(735,60)" name="Text">
+      <a name="text" val="OR"/>
+    </comp>
+    <comp loc="(380,760)" name="VHDL_XNOR">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(390,150)" name="VHDL_AND">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(390,520)" name="VHDL_NOR">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(390,950)" name="VHDL_PORTS">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(400,310)" name="VHDL_NOT">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(920,150)" name="VHDL_OR">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(920,320)" name="VHDL_NAND">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(920,520)" name="VHDL_XOR">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(130,660)" to="(160,660)"/>
+    <wire from="(130,700)" to="(140,700)"/>
+    <wire from="(140,120)" to="(160,120)"/>
+    <wire from="(140,270)" to="(150,270)"/>
+    <wire from="(140,450)" to="(170,450)"/>
+    <wire from="(140,490)" to="(150,490)"/>
+    <wire from="(140,700)" to="(140,780)"/>
+    <wire from="(140,700)" to="(190,700)"/>
+    <wire from="(140,780)" to="(160,780)"/>
+    <wire from="(140,80)" to="(150,80)"/>
+    <wire from="(150,150)" to="(170,150)"/>
+    <wire from="(150,270)" to="(150,310)"/>
+    <wire from="(150,270)" to="(200,270)"/>
+    <wire from="(150,310)" to="(180,310)"/>
+    <wire from="(150,490)" to="(150,540)"/>
+    <wire from="(150,490)" to="(200,490)"/>
+    <wire from="(150,540)" to="(170,540)"/>
+    <wire from="(150,80)" to="(150,150)"/>
+    <wire from="(150,80)" to="(200,80)"/>
+    <wire from="(160,120)" to="(160,170)"/>
+    <wire from="(160,120)" to="(200,120)"/>
+    <wire from="(160,170)" to="(170,170)"/>
+    <wire from="(160,660)" to="(160,760)"/>
+    <wire from="(160,660)" to="(190,660)"/>
+    <wire from="(170,450)" to="(170,520)"/>
+    <wire from="(170,450)" to="(200,450)"/>
+    <wire from="(230,270)" to="(320,270)"/>
+    <wire from="(250,100)" to="(320,100)"/>
+    <wire from="(260,470)" to="(320,470)"/>
+    <wire from="(260,680)" to="(310,680)"/>
+    <wire from="(660,120)" to="(680,120)"/>
+    <wire from="(660,80)" to="(700,80)"/>
+    <wire from="(680,120)" to="(680,170)"/>
+    <wire from="(680,120)" to="(720,120)"/>
+    <wire from="(680,170)" to="(700,170)"/>
+    <wire from="(680,250)" to="(700,250)"/>
+    <wire from="(680,290)" to="(690,290)"/>
+    <wire from="(680,450)" to="(700,450)"/>
+    <wire from="(680,490)" to="(690,490)"/>
+    <wire from="(690,290)" to="(690,340)"/>
+    <wire from="(690,290)" to="(740,290)"/>
+    <wire from="(690,340)" to="(700,340)"/>
+    <wire from="(690,490)" to="(690,540)"/>
+    <wire from="(690,490)" to="(740,490)"/>
+    <wire from="(690,540)" to="(700,540)"/>
+    <wire from="(700,250)" to="(700,320)"/>
+    <wire from="(700,250)" to="(740,250)"/>
+    <wire from="(700,450)" to="(700,520)"/>
+    <wire from="(700,450)" to="(740,450)"/>
+    <wire from="(700,80)" to="(700,150)"/>
+    <wire from="(700,80)" to="(720,80)"/>
+    <wire from="(770,100)" to="(840,100)"/>
+    <wire from="(800,270)" to="(860,270)"/>
+    <wire from="(800,470)" to="(860,470)"/>
+  </circuit>
+  <vhdl name="VHDL_AND">--------------------------------------------------------------------------------
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description :
+--
+--------------------------------------------------------------------------------
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY VHDL_AND IS
+  PORT (
+  ------------------------------------------------------------------------------
+  --Insert input ports below
+    X_AND      : IN  std_logic; -- input bit example
+    Y_AND      : IN  std_logic; -- input bit example
+  ------------------------------------------------------------------------------
+  --Insert output ports below
+    Z_AND      : OUT std_logic  -- output bit example
+    );
+END VHDL_AND;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF VHDL_AND IS
+
+BEGIN
+
+	Z_AND &lt;= X_AND AND Y_AND;
+
+END TypeArchitecture;
+</vhdl>
+  <vhdl name="VHDL_NOT">--------------------------------------------------------------------------------
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description :
+--
+--------------------------------------------------------------------------------
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY VHDL_NOT IS
+  PORT (
+  ------------------------------------------------------------------------------
+  --Insert input ports below
+    X_NOT      : IN  std_logic; -- input bit example
+    
+  ------------------------------------------------------------------------------
+  --Insert output ports below
+    Z_NOT      : OUT std_logic  -- output bit example
+    );
+END VHDL_NOT;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF VHDL_NOT IS
+
+BEGIN
+
+	Z_NOT &lt;= NOT X_NOT;
+
+END TypeArchitecture;
+</vhdl>
+  <vhdl name="VHDL_OR">--------------------------------------------------------------------------------
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description :
+--
+--------------------------------------------------------------------------------
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY VHDL_OR IS
+  PORT (
+  ------------------------------------------------------------------------------
+  --Insert input ports below
+    X_OR      : IN  std_logic; -- input bit example
+    Y_OR      : IN  std_logic; -- input bit example
+  ------------------------------------------------------------------------------
+  --Insert output ports below
+    Z_OR      : OUT std_logic  -- output bit example
+    );
+END VHDL_OR;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF VHDL_OR IS
+
+BEGIN
+
+	Z_OR &lt;= X_OR OR Y_OR;
+
+END TypeArchitecture;
+</vhdl>
+  <vhdl name="VHDL_NAND">--------------------------------------------------------------------------------
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description :
+--
+--------------------------------------------------------------------------------
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY VHDL_NAND IS
+  PORT (
+  ------------------------------------------------------------------------------
+  --Insert input ports below
+    X_NAND      : IN  std_logic; -- input bit example
+    Y_NAND      : IN  std_logic; -- input bit example
+  ------------------------------------------------------------------------------
+  --Insert output ports below
+    Z_NAND      : OUT std_logic  -- output bit example
+    );
+END VHDL_NAND;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF VHDL_NAND IS
+
+BEGIN
+
+	Z_NAND &lt;= X_NAND NAND Y_NAND;
+
+END TypeArchitecture;
+</vhdl>
+  <vhdl name="VHDL_NOR">--------------------------------------------------------------------------------
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description :
+--
+--------------------------------------------------------------------------------
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY VHDL_NOR IS
+  PORT (
+  ------------------------------------------------------------------------------
+  --Insert input ports below
+    X_NOR      : IN  std_logic; -- input bit example
+    Y_NOR      : IN  std_logic; -- input bit example
+  ------------------------------------------------------------------------------
+  --Insert output ports below
+    Z_NOR      : OUT std_logic  -- output bit example
+    );
+END VHDL_NOR;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF VHDL_NOR IS
+
+BEGIN
+
+	Z_NOR &lt;= X_NOR NOR Y_NOR;
+
+END TypeArchitecture;
+</vhdl>
+  <vhdl name="VHDL_XOR">--------------------------------------------------------------------------------
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description :
+--
+--------------------------------------------------------------------------------
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY VHDL_XOR IS
+  PORT (
+  ------------------------------------------------------------------------------
+  --Insert input ports below
+    X_XOR      : IN  std_logic; -- input bit example
+    Y_XOR      : IN  std_logic; -- input bit example
+  ------------------------------------------------------------------------------
+  --Insert output ports below
+    Z_XOR      : OUT std_logic  -- output bit example
+    );
+END VHDL_XOR;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF VHDL_XOR IS
+
+BEGIN
+
+	Z_XOR &lt;= X_XOR XOR Y_XOR;
+
+END TypeArchitecture;
+</vhdl>
+  <vhdl name="VHDL_XNOR">--------------------------------------------------------------------------------
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description :
+--
+--------------------------------------------------------------------------------
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY VHDL_XNOR IS
+  PORT (
+  ------------------------------------------------------------------------------
+  --Insert input ports below
+    X_XNOR      : IN  std_logic; -- input bit example
+    Y_XNOR      : IN  std_logic; -- input bit example
+  ------------------------------------------------------------------------------
+  --Insert output ports below
+    Z_XNOR      : OUT std_logic  -- output bit example
+    );
+END VHDL_XNOR;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF VHDL_XNOR IS
+
+BEGIN
+
+	Z_XNOR &lt;= X_XNOR XNOR Y_XNOR;
+
+END TypeArchitecture;
+</vhdl>
+  <vhdl name="VHDL_PORTS">--------------------------------------------------------------------------------&#13;
+-- Project :&#13;
+-- File    :&#13;
+-- Autor   :&#13;
+-- Date    :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+-- Description :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+LIBRARY ieee;&#13;
+USE ieee.std_logic_1164.all;&#13;
+&#13;
+ENTITY VHDL_PORTS IS&#13;
+  PORT (&#13;
+  ------------------------------------------------------------------------------&#13;
+  --Insert input ports below&#13;
+    X     : IN  std_logic;                    -- input bit example&#13;
+    Y     : IN  std_logic;                    -- input bit example
+  ------------------------------------------------------------------------------&#13;
+  --Insert output ports below&#13;
+    AND_Z       : OUT std_logic;                  -- output bit example&#13;
+    OR_Z        : OUT std_logic;                  -- output bit example
+    NAND_Z      : OUT std_logic;                  -- output bit example
+    NOR_Z       : OUT std_logic;                  -- output bit example
+    XOR_Z       : OUT std_logic;                  -- output bit example
+    XNOR_Z      : OUT std_logic;                  -- output bit example
+    NOT_X_Z     : OUT std_logic;                  -- output bit example
+    NOT_Y_Z     : OUT std_logic                   -- output bit example
+
+    );&#13;
+END VHDL_PORTS;&#13;
+&#13;
+--------------------------------------------------------------------------------&#13;
+--Complete your VHDL description below&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+ARCHITECTURE TypeArchitecture OF VHDL_PORTS IS&#13;
+&#13;
+BEGIN&#13;
+&#13;	
+	AND_Z   &lt;= X AND Y;
+	OR_Z    &lt;= X OR Y;
+	NAND_Z  &lt;= X NAND Y;
+	NOR_Z   &lt;= X NOR Y;
+	XOR_Z   &lt;= X XOR Y;
+	XNOR_Z  &lt;= X XNOR Y;
+	NOT_X_Z &lt;= NOT X;
+	NOT_Y_Z &lt;= NOT Y;
+&#13;
+END TypeArchitecture;&#13;
+</vhdl>
+</project>

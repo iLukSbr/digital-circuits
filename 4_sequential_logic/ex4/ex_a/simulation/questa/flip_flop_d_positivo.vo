@@ -1,0 +1,163 @@
+// Copyright (C) 2023  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition"
+
+// DATE "05/03/2024 06:10:31"
+
+// 
+// Device: Altera EPM240T100C5 Package TQFP100
+// 
+
+// 
+// This Verilog file should be used for Questa Intel FPGA (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module flip_flop_d_positivo (
+	d,
+	clk,
+	prn,
+	clrn,
+	q,
+	qn);
+input 	d;
+input 	clk;
+input 	prn;
+input 	clrn;
+output 	q;
+output 	qn;
+
+// Design Ports Information
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \clk~combout ;
+wire \d~combout ;
+wire \clrn~combout ;
+wire \prn~combout ;
+wire \qstate~regout ;
+
+
+// Location: PIN_53,	 I/O Standard: 3.3V Schmitt Trigger Input,	 Current Strength: Default
+maxii_io \clk~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\clk~combout ),
+	.padio(clk));
+// synopsys translate_off
+defparam \clk~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_50,	 I/O Standard: 3.3V Schmitt Trigger Input,	 Current Strength: Default
+maxii_io \d~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\d~combout ),
+	.padio(d));
+// synopsys translate_off
+defparam \d~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_52,	 I/O Standard: 3.3V Schmitt Trigger Input,	 Current Strength: Default
+maxii_io \clrn~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\clrn~combout ),
+	.padio(clrn));
+// synopsys translate_off
+defparam \clrn~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_51,	 I/O Standard: 3.3V Schmitt Trigger Input,	 Current Strength: Default
+maxii_io \prn~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\prn~combout ),
+	.padio(prn));
+// synopsys translate_off
+defparam \prn~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X7_Y1_N2
+maxii_lcell qstate(
+// Equation(s):
+// \qstate~regout  = DFFEAS((((\d~combout ))), \clk~combout , \clrn~combout , , , VCC, !\prn~combout , , )
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\d~combout ),
+	.aclr(!\clrn~combout ),
+	.aload(!\prn~combout ),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\qstate~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam qstate.lut_mask = "ff00";
+defparam qstate.operation_mode = "normal";
+defparam qstate.output_mode = "reg_only";
+defparam qstate.register_cascade_mode = "off";
+defparam qstate.sum_lutc_input = "datac";
+defparam qstate.synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_49,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \q~I (
+	.datain(\qstate~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(q));
+// synopsys translate_off
+defparam \q~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_48,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \qn~I (
+	.datain(!\qstate~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(qn));
+// synopsys translate_off
+defparam \qn~I .operation_mode = "output";
+// synopsys translate_on
+
+endmodule

@@ -1,0 +1,11 @@
+Fitter Status : Successful - Fri Mar 22 21:16:37 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : cinto_automotivo
+Top-level Entity Name : cinto_automotivo
+Family : MAX II
+Device : EPM240T100C5
+Timing Models : Final
+Total logic elements : 1 / 240 ( < 1 % )
+Total pins : 4 / 80 ( 5 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

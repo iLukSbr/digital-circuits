@@ -1,0 +1,29 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'clk_50M'
+Slack : -7.347
+TNS   : -127.388
+
+Type  : Setup 'basic_divider:clk_div|temp'
+Slack : -2.938
+TNS   : -17.664
+
+Type  : Hold 'clk_50M'
+Slack : -1.005
+TNS   : -1.005
+
+Type  : Hold 'basic_divider:clk_div|temp'
+Slack : 1.229
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clk_50M'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'basic_divider:clk_div|temp'
+Slack : 0.334
+TNS   : 0.000
+
+------------------------------------------------------------

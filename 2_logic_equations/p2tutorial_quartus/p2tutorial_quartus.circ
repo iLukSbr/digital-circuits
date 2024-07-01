@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="3.8.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#TTL" name="6"/>
+  <lib desc="#TCL" name="7"/>
+  <lib desc="#Base" name="8"/>
+  <lib desc="#BFH-Praktika" name="9"/>
+  <lib desc="#Input/Output-Extra" name="10"/>
+  <lib desc="#Soc" name="11"/>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="8" map="Button2" name="Poke Tool"/>
+    <tool lib="8" map="Button3" name="Menu Tool"/>
+    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="8" name="Poke Tool"/>
+    <tool lib="8" name="Edit Tool"/>
+    <tool lib="8" name="Wiring Tool"/>
+    <tool lib="8" name="Text Tool"/>
+    <sep/>
+    <tool lib="0" name="Pin"/>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <sep/>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+    <tool lib="1" name="XOR Gate"/>
+    <tool lib="1" name="NAND Gate"/>
+    <tool lib="1" name="NOR Gate"/>
+    <sep/>
+    <tool lib="4" name="D Flip-Flop"/>
+    <tool lib="4" name="Register"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="main"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(100,140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="MP"/>
+    </comp>
+    <comp lib="0" loc="(100,180)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="CEU"/>
+    </comp>
+    <comp lib="0" loc="(100,220)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="IL"/>
+    </comp>
+    <comp lib="0" loc="(320,380)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="A"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(390,140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="A_VHDL"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(220,380)" name="NOT Gate"/>
+    <comp lib="1" loc="(280,380)" name="AND Gate">
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp loc="(360,140)" name="cinto_automotivo">
+      <a name="appearance" val="evolution"/>
+      <a name="label" val="Supervisao_cinto"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <wire from="(100,140)" to="(130,140)"/>
+    <wire from="(100,180)" to="(160,180)"/>
+    <wire from="(100,220)" to="(180,220)"/>
+    <wire from="(130,140)" to="(130,360)"/>
+    <wire from="(130,140)" to="(200,140)"/>
+    <wire from="(130,360)" to="(230,360)"/>
+    <wire from="(160,150)" to="(160,180)"/>
+    <wire from="(160,150)" to="(200,150)"/>
+    <wire from="(160,180)" to="(160,380)"/>
+    <wire from="(160,380)" to="(190,380)"/>
+    <wire from="(180,160)" to="(180,220)"/>
+    <wire from="(180,160)" to="(200,160)"/>
+    <wire from="(180,220)" to="(180,400)"/>
+    <wire from="(180,400)" to="(230,400)"/>
+    <wire from="(220,380)" to="(230,380)"/>
+    <wire from="(280,380)" to="(320,380)"/>
+    <wire from="(360,140)" to="(390,140)"/>
+  </circuit>
+  <vhdl name="cinto_automotivo">--------------------------------------------------------------------------------&#13;
+-- Project :&#13; p2tutorial_quartus
+-- File    :&#13; cinto_automotivo
+-- Autor   :&#13; Lucas e Willian
+-- Date    :&#13; 22/03/2024
+--&#13;
+--------------------------------------------------------------------------------&#13;
+-- Descrição :&#13;
+--&#13; Circuito combinacional com 3 entradas e uma saída - supervisão de uso de
+-- cinto automotivo
+--------------------------------------------------------------------------------&#13;
+&#13;
+LIBRARY ieee;&#13;
+USE ieee.std_logic_1164.all;&#13;
+&#13;
+ENTITY cinto_automotivo IS&#13;
+  PORT (&#13;
+  ------------------------------------------------------------------------------&#13;
+  --Insert input ports below&#13;
+    motorista_presente  : IN  std_logic; -- input bit example&#13;
+    cinto_em_uso        : IN  std_logic; -- input bit example&#13;
+    ignicao_ligada      : IN  std_logic; -- input bit example
+  ------------------------------------------------------------------------------&#13;
+  --Insert output ports below&#13;
+    alarme              : OUT std_logic  -- output bit example&#13;
+    );&#13;
+END cinto_automotivo;&#13;
+&#13;
+--------------------------------------------------------------------------------&#13;
+--Complete your VHDL description below&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+ARCHITECTURE combinacional OF cinto_automotivo IS&#13;
+&#13;
+BEGIN&#13;
+&#13;	alarme &lt;= motorista_presente and (not cinto_em_uso) and ignicao_ligada;
+&#13;
+END combinacional;&#13;
+</vhdl>
+</project>
